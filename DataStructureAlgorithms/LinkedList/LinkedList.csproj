@@ -32,6 +32,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>LinkedList.CircularLinkedList.CircularLinkedListOperations</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -43,7 +46,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LinkedListTraversal.cs" />
+    <Compile Include="CircularLinkedList\CircularLinkedList.cs" />
+    <Compile Include="CircularLinkedList\CircularLinkedListOperations.cs" />
+    <Compile Include="CircularLinkedList\Node.cs" />
+    <Compile Include="SinglyLinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
