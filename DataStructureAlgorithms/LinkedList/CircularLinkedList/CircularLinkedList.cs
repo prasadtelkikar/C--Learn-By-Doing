@@ -128,7 +128,8 @@ namespace LinkedList.CircularLinkedList
             }
         public Node<T> this[int index]
             {
-            get {
+            get
+                {
                 if ( index >= count || index < 0 )
                     throw new ArgumentOutOfRangeException("index");
                 else
@@ -139,6 +140,32 @@ namespace LinkedList.CircularLinkedList
 
                     return node;
                     }
+                }
+            }
+
+        public bool RemoveLast ()
+            {
+            if ( head == null )
+                return false;
+            else
+                {
+                tail.Previous.Next = head;
+                head.Previous = tail.Previous;
+                tail = head.Previous;
+                return true;
+                }
+            }
+
+        public bool RemoveFirst ()
+            {
+            if ( head == null )
+                return false;
+            else
+                {
+                tail.Next  = head.Next;
+                head.Next.Previous = tail;
+                head = head.Next;
+                return true;
                 }
             }
         }

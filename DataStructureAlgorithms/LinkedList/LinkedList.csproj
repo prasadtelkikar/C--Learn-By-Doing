@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>LinkedList.CircularLinkedList.CircularLinkedListOperations</StartupObject>
+    <StartupObject>LinkedList.Exercise.NthFromLastDictionary</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,8 +49,17 @@
     <Compile Include="CircularLinkedList\CircularLinkedList.cs" />
     <Compile Include="CircularLinkedList\CircularLinkedListOperations.cs" />
     <Compile Include="CircularLinkedList\Node.cs" />
+    <Compile Include="Exercise\NthFromLastDictionary.cs" />
+    <Compile Include="Exercise\StackUsingLinkedList.cs" />
+    <Compile Include="Exercise\NthNodeFromEnd.cs" />
     <Compile Include="SinglyLinkedList.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UnrolledLinkedList\LinkedBlock.cs" />
+    <Compile Include="UnrolledLinkedList\LinkedBlockList.cs" />
+    <Compile Include="UnrolledLinkedList\LinkedList.cs" />
+    <Compile Include="UnrolledLinkedList\ListNode.cs" />
+    <Compile Include="UnrolledLinkedList\StartUp.cs" />
+    <Compile Include="UnrolledLinkedList\UnrolledLinkedListOperations.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

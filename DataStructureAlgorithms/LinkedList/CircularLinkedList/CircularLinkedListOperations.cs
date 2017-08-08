@@ -16,8 +16,36 @@ namespace LinkedList.CircularLinkedList
 
             CreateCircularLinkedList(circularLinkedList, numberOfElements);
             DisplayCircularLinkedList(circularLinkedList);
+
+            Console.WriteLine("Enter number to be added at last:");
+            numberOfElements = Convert.ToInt32(Console.ReadLine());
+            InsertNodeAtLast(circularLinkedList, numberOfElements);
+            DisplayCircularLinkedList(circularLinkedList);
+
+            Console.WriteLine("Delete last node:");
+            DeleteLastNode(circularLinkedList);
+            DisplayCircularLinkedList(circularLinkedList);
+            
+            Console.WriteLine("Delete first node:");
+            DeleteFirstNode(circularLinkedList);
+            DisplayCircularLinkedList(circularLinkedList);
             Console.ReadLine();
             }
+
+        private static void DeleteFirstNode(CircularLinkedList<int> circularLinkedList)
+        {
+            circularLinkedList.RemoveFirst();
+        }
+
+        private static void DeleteLastNode(CircularLinkedList<int> circularLinkedList)
+        {
+            circularLinkedList.RemoveLast();
+        }
+
+        private static void InsertNodeAtLast(CircularLinkedList<int> circularLinkedList, int numberOfElements)
+        {
+            circularLinkedList.AddFirst(numberOfElements);
+        }
 
         private static void CreateCircularLinkedList (CircularLinkedList<int> circularLinkedList, int numberOfElements)
             {
