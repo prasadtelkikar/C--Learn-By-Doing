@@ -21,6 +21,7 @@ namespace LinkedList.Exercise
 
             bool isCyclic = CheckListCyclic(linkedList);
             Console.WriteLine(isCyclic ? "Yes cyclic" : "Not cyclic");
+            Console.ReadKey();
             }
 
         private static bool CheckListCyclic (LinkedList<int> linkedList)

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-/* Store node one by one into a list and check node is already present in that list or not
+/* Problem : 7 Cyclic linked list using list
+ * Store node one by one into a list and check node is already present in that list or not
  * if present then list is cyclic otherwise no
  */
 namespace LinkedList.Exercise

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-/* Check for cyclic linked list: Brute force technique
+/* Problem 6: Brute fource cyclic linked list
+ * Check for cyclic linked list: Brute force technique
  * Iterate through linked list using two loops and check next node 
  * "I am not able to create a proper inputs for testcases this code might contain bugs "
  */
@@ -20,6 +21,7 @@ namespace LinkedList.Exercise
                 }
             bool isCyclic = CheckCyclicList(linkedList.First);
             Console.WriteLine(isCyclic? "Yes : " : "Not : " + "Cyclic list");
+            Console.ReadKey();
             }
 
         private static bool CheckCyclicList (LinkedListNode<int> firstNode)
