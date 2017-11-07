@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <StartupObject>C__Data_Structure.DoublyLinkedList</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Content Include="Program.cs" />
+    <Content Include="SinglyLinkedList.cs" />
+    <Content Include=".vscode\launch.json" />
+    <Content Include="DoublyLinkedList.cs" />
+  </ItemGroup>
+</Project>
