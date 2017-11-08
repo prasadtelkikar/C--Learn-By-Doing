@@ -13,14 +13,15 @@
             "args": [],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,
-            "console": "internalConsole"
+            "console": "internalConsole",
+            "requireExactSource": false
         },
         {
             "name": ".NET Core Launch (web)",
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "${workspaceRoot}/bin/Debug/<insert-target-framework-here>/<insert-project-name-here>.dll",
+            "program": "${workspaceRoot}/bin/MCD/Debug/netcoreapp2.0/C#-Data-Structure.dll",
             "args": [],
             "cwd": "${workspaceRoot}",
             "stopAtEntry": false,

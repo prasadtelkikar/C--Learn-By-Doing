@@ -48,6 +48,13 @@ namespace C__Data_Structure
                 Console.WriteLine("Error!");
                 return;
             }
+            if(position > length)
+                position = length;
+
+            if(position == 1){
+                InsertAtFirst(value);
+                return;
+            }
             while(currentNode != null && index < position){
                 currentNode = currentNode.next;
                 index++;
@@ -83,59 +90,77 @@ namespace C__Data_Structure
             }
                 
             Node currentNode = head;
-            while(currentNode.next.next != null)
+            Node prevNode = head;
+            while(currentNode.next != null){
+                prevNode = currentNode;
                 currentNode = currentNode.next;
-
-            Node freeNode = currentNode.next;
-            freeNode.prev = null;
-            currentNode.next = null;
-            freeNode = null;
+            }
+            currentNode.prev = null;
+            prevNode.next = null;
+            currentNode = null;
+            
             length--;
         }
 
         public void DeleteFromPosition(int position){
+            Node currentNode = head;
+            Node prevNode = head;
             int index = 1;
-            if(position < 1)
+            if(currentNode == null || position < 1)
+                return;
+            if(position == 1)
             {
-                Console.WriteLine("Error!");
+                DeleteFromFront();
                 return;
             }
-            if(position == 1){
-                DeleteFromFront();
-                length--;
+            if(position > length || position == length)
+            {
+                DeleteFromEnd();
+                return;
             }
-            else{
-                Node currentNode = head;
-                while(currentNode!=null && index < position){
-                    currentNode = currentNode.next;
-                    index++;
-                }
-                Node previousNode = currentNode.prev;
-                Node nextNode = currentNode.next;
-                if(nextNode == null)
-                    previousNode.next = null;
 
-                if(previousNode == null)
-                    nextNode.prev = null;
-
-                if(nextNode != null && previousNode!= null)    {
-                previousNode.next = nextNode;
-                nextNode.prev = previousNode;
-                }
-                currentNode = null;
+            while(currentNode != null && index <position){
+                prevNode = currentNode;
+                currentNode = currentNode.next;
+                index++;
             }
+            
+            prevNode.next = currentNode.next;
+            currentNode.next.prev = prevNode;
+            currentNode = null;
+            length--;
         }
+
         public void Display(){
             Node currentNode = head;
             
             if(head == null){
                 Console.WriteLine("Empty list");
+                return;
             }
 
             while(currentNode != null){
                 Console.WriteLine(currentNode.data);
                 currentNode = currentNode.next;
             }
+        }
+
+        private int Length(){
+            return length;
+        }
+        private void DisplayReverse(){
+            Node currentNode = head;
+            if(currentNode == null){
+                Console.WriteLine("Empty list");
+                return;
+            }
+            while(currentNode.next != null)
+                currentNode = currentNode.next;
+
+            while(currentNode!= null){
+                Console.WriteLine(currentNode.data);
+                currentNode = currentNode.prev;
+            }                
         }
 
         public static void Main(string[] args)
@@ -146,20 +171,20 @@ namespace C__Data_Structure
             objDll.InsertAtFirst(2);
             objDll.InsertAtFirst(1);
 
-            objDll.InsertAtEnd(6);
-            objDll.InsertAtEnd(5);
             objDll.InsertAtEnd(4);
+            objDll.InsertAtEnd(5);
+            objDll.InsertAtEnd(6);
 
             objDll.InsertAtPosition(99, 3);
-
+            objDll.DeleteFromPosition(10);
             objDll.DeleteFromFront();
             objDll.DeleteFromFront();
 
             objDll.DeleteFromEnd();
             objDll.DeleteFromEnd();
 
-            //TODO: Fix issue.
             objDll.DeleteFromPosition(3);
+            //objDll.DisplayReverse();
             objDll.Display();
 
         }

@@ -20,9 +20,8 @@ namespace C__Data_Structure
             }   
             else
             {
-                Node oldHead = head;
                 Node element = InitializeLinkedListElement(value);
-                element.next = oldHead;
+                element.next = head;
                 head = element;
             }
             length++;
