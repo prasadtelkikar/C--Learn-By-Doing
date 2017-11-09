@@ -25,13 +25,13 @@ namespace C__Data_Structure
         public void FindNthNode(int position){
             Node currentNode = head;
             int temp = position;
+            
             if(currentNode == null){
                 Console.WriteLine("Empty list");
                 return;
             }
 
             int length = LengthOfList();
-            Console.WriteLine("Length = "+length+ "& position = "+position);
             if(length < position){
                 Console.WriteLine("fewer numbers of nodes in the list");
                 return;
@@ -41,7 +41,6 @@ namespace C__Data_Structure
 
             for(int i = 0; i < indexFromFront; i++){
                 currentNode = currentNode.next;
-                Console.WriteLine("CurrentNode :"+ currentNode.data);
             }
             Console.WriteLine(currentNode.data);
         }
@@ -70,6 +69,7 @@ namespace C__Data_Structure
                  }while(currentNode!= null);
                 }
         }
+
         public static void Main(string[] args)
         {
             NthElementFromEnd nth = new NthElementFromEnd();
@@ -79,9 +79,7 @@ namespace C__Data_Structure
             nth.InsertAtFront(3);
             nth.InsertAtFront(2);
             nth.InsertAtFront(1);
-            nth.Display();
-            Console.WriteLine("----------------------------------");
-            nth.FindNthNode(2);
+            nth.FindNthNode(7);
         }
         
         private class Node
