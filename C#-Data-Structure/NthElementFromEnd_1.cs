@@ -31,7 +31,8 @@ namespace C__Data_Structure
                 currentNode = currentNode.next;
             }
         }
-        public int LenghOfList(Node headList){
+
+        private int LenghOfList(Node headList){
             int length = 0;
             Node currentNode = headList;
 
@@ -50,18 +51,21 @@ namespace C__Data_Structure
                 {
                     return;
                 }
-
-            if(length < position)  
+            
+            if(length < position || position <= 0){
                 Console.WriteLine("Fewer number of nodes in the list");
-
-            while(currentNode != null){
+                return;
+            }
+                
+            //Time Complexity: O(n^2): Brute-Force Method
+            while(currentNode != null){ //n
                 length = LenghOfList(currentNode);
                 int index = 0;
-                Node movingNode = currentNode;
+                movingNode = currentNode;
                 if(length > position - 1){
-                    while(movingNode != null){
+                    while(movingNode != null){ //n
                         index++;
-                        movingNode = movingNode.newNode;
+                        movingNode = movingNode.next;
                     }
                     if(index == position){
                         Console.WriteLine("Value at "+position+" is : "+ currentNode.data);
@@ -80,8 +84,9 @@ namespace C__Data_Structure
             nthElement.InsertAtFirst(2);
             nthElement.InsertAtFirst(1);
             nthElement.InsertAtFirst(0);
-            //nthElement.FindNthElement(3);
-            Console.WriteLine(nthElement.LenghOfList());
+            nthElement.FindNthElement(3);
+
+            //Console.WriteLine(nthElement.LenghOfList(nthElement.head));
             //nthElement.Display();
         }
 

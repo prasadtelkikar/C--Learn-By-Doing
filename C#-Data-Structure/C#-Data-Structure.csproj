@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <StartupObject>C__Data_Structure.NthElementFromEnd_1</StartupObject>
+    <StartupObject>C__Data_Structure.CyclicLinkedList_1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Program.cs" />
@@ -15,5 +15,9 @@
     <Content Include="NthElementFromEnd.cs" />
     <Content Include=".vscode\tasks.json" />
     <Content Include="NthElementFromEnd_1.cs" />
+    <Content Include="NthElementFromEnd_2.cs" />
+    <Content Include="NthElementFromEnd_3.cs" />
+    <Content Include="CyclicLinkedList.cs" />
+    <Content Include="CyclicLinkedList_1.cs" />
   </ItemGroup>
 </Project>
