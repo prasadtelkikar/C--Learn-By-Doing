@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <StartupObject>C__Data_Structure.CyclicLinkedList_1</StartupObject>
+    <StartupObject>C__Data_Structure.StartOfCyclicList</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Program.cs" />
@@ -19,5 +19,6 @@
     <Content Include="NthElementFromEnd_3.cs" />
     <Content Include="CyclicLinkedList.cs" />
     <Content Include="CyclicLinkedList_1.cs" />
+    <Content Include="StartOfCyclicList.cs" />
   </ItemGroup>
 </Project>
