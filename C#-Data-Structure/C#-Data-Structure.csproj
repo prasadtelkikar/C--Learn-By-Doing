@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.0</TargetFramework>
-    <StartupObject>C__Data_Structure.StartOfCyclicList</StartupObject>
+    <StartupObject>C__Data_Structure.ReverseSinglyLinkedList</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Program.cs" />
@@ -20,5 +20,9 @@
     <Content Include="CyclicLinkedList.cs" />
     <Content Include="CyclicLinkedList_1.cs" />
     <Content Include="StartOfCyclicList.cs" />
+    <Content Include="LengthOfCyclicLoop.cs" />
+    <Content Include="stackoverflow.cs" />
+    <Content Include="InsertInSortedList.cs" />
+    <Content Include="ReverseSinglyLinkedList.cs" />
   </ItemGroup>
 </Project>
