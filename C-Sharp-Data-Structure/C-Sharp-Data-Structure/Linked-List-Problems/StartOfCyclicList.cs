@@ -1,6 +1,6 @@
 using System;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class StartOfCyclicList
     {

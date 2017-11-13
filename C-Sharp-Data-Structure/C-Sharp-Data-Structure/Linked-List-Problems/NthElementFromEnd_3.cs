@@ -1,18 +1,23 @@
 using System;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class NthElementFromEnd_3
     {
         Node head;
         int length;
-        public NthElementFromEnd_3(){
+
+        public NthElementFromEnd_3()
+        {
             head = null;
             length = 0;
         }
-        public void InsertAtFirst(int value){
+
+        public void InsertAtFirst(int value)
+        {
             Node newNode = new Node(value);
-            if(head == null){
+            if (head == null)
+            {
                 head = newNode;
                 length++;
                 return;
@@ -22,39 +27,46 @@ namespace C__Data_Structure
             length++;
         }
 
-        public void Display(){
+        public void Display()
+        {
             Node currentNode = head;
-            if(currentNode == null){
+            if (currentNode == null)
+            {
                 Console.WriteLine("Error: list is empty");
                 return;
             }
-            while(currentNode != null){
+            while (currentNode != null)
+            {
                 Console.WriteLine(currentNode.data);
                 currentNode = currentNode.next;
             }
         }
-        
-        public void FindNthNode(int position){
+
+        public void FindNthNode(int position)
+        {
             Node forwardNode = head;
             Node currentNode = head;
             int index = position;
-            if(position > length || position < 1){
+            if (position > length || position < 1)
+            {
                 Console.WriteLine("Fewer nodes present in the list");
                 return;
             }
-            if(head == null){
+            if (head == null)
+            {
                 Console.WriteLine("Error: Empty list");
                 return;
             }
-            while(index-- > 0)
+            while (index-- > 0)
                 forwardNode = forwardNode.next;
-            
-            while(forwardNode != null){
+
+            while (forwardNode != null)
+            {
                 currentNode = currentNode.next;
                 forwardNode = forwardNode.next;
             }
 
-            Console.WriteLine("CurrentNode: "+currentNode.data);
+            Console.WriteLine("CurrentNode: " + currentNode.data);
         }
 
         public static void Main(string[] args)
@@ -70,13 +82,15 @@ namespace C__Data_Structure
             //objNthNode.Display();
             objNthNode.FindNthNode(7);
         }
-        private class Node{
+        private class Node
+        {
             public int data;
             public Node next;
 
-        public Node(int data){
-            this.data = data;
-            }  
+            public Node(int data)
+            {
+                this.data = data;
+            }
         }
     }
 }

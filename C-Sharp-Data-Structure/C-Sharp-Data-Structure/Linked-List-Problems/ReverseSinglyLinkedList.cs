@@ -1,6 +1,6 @@
 using System;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class ReverseSinglyLinkedList
     {
@@ -35,9 +35,10 @@ namespace C__Data_Structure
                 return;
             }
             while(currentNode!= null){
-                Console.WriteLine(currentNode.data);
+                Console.Write(currentNode.data+"-> ");
                 currentNode = currentNode.next;
             }
+            Console.Write("null");
         }
 
         public void ReverseLinkedList(){
@@ -69,10 +70,12 @@ namespace C__Data_Structure
             objRLL.InsertAtFirst(0);
 
             objRLL.Display();  //In forward direction
-
+            Console.WriteLine();
             Console.WriteLine("----Reverse linked list-----");
             objRLL.ReverseLinkedList();
             objRLL.Display(); //In reverse direction
+
+            Console.ReadKey();
 
         }
 

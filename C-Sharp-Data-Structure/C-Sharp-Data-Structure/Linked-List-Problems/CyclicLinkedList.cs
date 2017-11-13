@@ -1,30 +1,36 @@
 using System;
 using System.Collections.Generic;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class CyclicLinkedList
     {
         Node head;
-        public CyclicLinkedList(){
+        public CyclicLinkedList()
+        {
             head = null;
         }
-        private Node InitializeNode(int value){
+        private Node InitializeNode(int value)
+        {
             return new Node(value);
         }
-        
+
         //Using list instead of Hashtable
-        public void FindCyclic(){
+        public void FindCyclic()
+        {
             Node currentNode = head;
             List<Node> visitedNodes = new List<Node>();
 
-            if(currentNode == null){
+            if (currentNode == null)
+            {
                 Console.WriteLine("Error: Empty list");
                 return;
             }
-            while(currentNode!= null){
+            while (currentNode != null)
+            {
 
-                if(visitedNodes.Contains(currentNode)){
+                if (visitedNodes.Contains(currentNode))
+                {
                     Console.WriteLine("Cyclic List");
                     return;
                 }
@@ -57,13 +63,17 @@ namespace C__Data_Structure
             EthNode.next = TrdNode; //Cyclic node
 
             objCLL.FindCyclic();
+
+            Console.ReadKey();
         }
 
-        private class Node{
+        private class Node
+        {
             public int data;
             public Node next;
-            
-            public Node(int data){
+
+            public Node(int data)
+            {
                 this.data = data;
                 this.next = null;
             }

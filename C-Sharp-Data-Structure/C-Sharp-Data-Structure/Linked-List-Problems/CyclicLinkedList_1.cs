@@ -1,30 +1,33 @@
 using System;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class CyclicLinkedList_1
     {
         Node head;
 
 
-        private Node InitializeNode(int data){
+        private Node InitializeNode(int data)
+        {
             return new Node(data);
         }
 
         //Most efficient way to resolve Cyclic linked list program: Floyd cycle finding algorithm
-        public void FindCyclic(){
+        public void FindCyclic()
+        {
             Node fastNode = head;
             Node slowNode = head;
-            if(fastNode == null)
+            if (fastNode == null)
             {
                 Console.WriteLine("Error: Empty Linked list");
                 return;
             }
-            while(slowNode != null && fastNode != null && fastNode.next != null){
+            while (slowNode != null && fastNode != null && fastNode.next != null)
+            {
                 fastNode = fastNode.next.next;
                 slowNode = slowNode.next;
 
-                if(fastNode == slowNode)
+                if (fastNode == slowNode)
                 {
                     Console.WriteLine("List is cyclic");
                     return;
@@ -54,15 +57,19 @@ namespace C__Data_Structure
             SvthNode.next = EthNode;
 
             EthNode.next = TrdNode; //Cyclic linkedList
-            
+
             objCLL.FindCyclic();
+
+            Console.ReadKey();
         }
 
-        private class Node{
+        private class Node
+        {
             public int data;
             public Node next;
 
-            public Node(int data){
+            public Node(int data)
+            {
                 this.data = data;
                 next = null;
             }

@@ -1,6 +1,6 @@
 using System;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class LengthOfCyclicLoop
     {
@@ -73,7 +73,8 @@ namespace C__Data_Structure
             
             int length = objLCL.FindLengthOfCycle();
 
-            Console.WriteLine(length);
+            Console.WriteLine("Length of Cyclic list: "+length);
+            Console.ReadKey();
         }
 
         private class Node{

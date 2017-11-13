@@ -1,19 +1,22 @@
 using System;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class InsertInSortedList
     {
         Node head;
         int length;
-        private Node InitializeNode(int data){
+        private Node InitializeNode(int data)
+        {
             return new Node(data);
         }
-        
-        public void InsertAtFirst(int data){
+
+        public void InsertAtFirst(int data)
+        {
             Node newNode = InitializeNode(data);
 
-            if(head == null){
+            if (head == null)
+            {
                 head = newNode;
                 length++;
                 return;
@@ -22,43 +25,51 @@ namespace C__Data_Structure
             head = newNode;
             length++;
         }
-        
-        public void InsertNodeToSortedList(int data){
+
+        public void InsertNodeToSortedList(int data)
+        {
             Node newNode = InitializeNode(data);
             Node currentNode = head;
             Node previouseNode = null;
 
-            if(head == null){
+            if (head == null)
+            {
                 head = newNode;
                 length++;
-                return;
+               return;
             }
-            while(currentNode != null && currentNode.data < data)
+            while (currentNode != null && currentNode.data < data)
             {
                 previouseNode = currentNode;
                 currentNode = currentNode.next;
             }
-            if(previouseNode != null){
+            if (previouseNode != null)
+            {
                 previouseNode.next = newNode;
                 newNode.next = currentNode;
             }
-            else{
+            else
+            {
                 newNode.next = currentNode;
                 head = newNode;
             }
             length++;
         }
 
-        public void Display(){
+        public void Display()
+        {
             Node currentNode = head;
-            if(currentNode == null){
+            if (currentNode == null)
+            {
                 Console.WriteLine("Error: Empty Linked list");
                 return;
             }
-            while(currentNode!=null){
-                Console.WriteLine(currentNode.data);
+            while (currentNode != null)
+            {
+                Console.Write(currentNode.data +"-> ");
                 currentNode = currentNode.next;
             }
+            Console.Write("null");
         }
 
         public static void Main(string[] args)
@@ -70,17 +81,20 @@ namespace C__Data_Structure
             objISL.InsertAtFirst(6);
             objISL.InsertAtFirst(4);
             objISL.InsertAtFirst(2);
-            
-            objISL.InsertNodeToSortedList(16);
+
+            objISL.InsertNodeToSortedList(10);
             objISL.Display();
-        
+
+            Console.ReadKey();
         }
-        
-        private class Node{
+
+        private class Node
+        {
             public int data;
             public Node next;
 
-            public Node(int data){
+            public Node(int data)
+            {
                 this.data = data;
             }
         }

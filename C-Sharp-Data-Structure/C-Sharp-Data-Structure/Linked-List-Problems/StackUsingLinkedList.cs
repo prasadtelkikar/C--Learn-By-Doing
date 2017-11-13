@@ -1,33 +1,39 @@
 using System;
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class StackUsingLinkedList
     {
         Node top;
         int length;
 
-        public StackUsingLinkedList(){
+        public StackUsingLinkedList()
+        {
             top = null;
             length = 0;
         }
 
-        public void Push(int value){
+        public void Push(int value)
+        {
             Node newNode = new Node(value);
-            if(top == null)
+            if (top == null)
                 top = newNode;
-            else{
+            else
+            {
                 newNode.next = top;
                 top = newNode;
             }
             length++;
         }
 
-        public int Pop(){
+        public int Pop()
+        {
             Node topNode = null;
-            if(top == null){
+            if (top == null)
+            {
                 return int.MaxValue;
             }
-            else{
+            else
+            {
                 topNode = top;
                 Node afterPop = top.next;
                 top = afterPop;
@@ -36,12 +42,14 @@ namespace C__Data_Structure
             }
         }
 
-        private Node Peek(){
+        private Node Peek()
+        {
             return top;
         }
 
-        public bool isEmpty(){
-            if(top == null || length == 0)
+        public bool isEmpty()
+        {
+            if (top == null || length == 0)
                 return true;
             else
                 return false;
@@ -60,7 +68,7 @@ namespace C__Data_Structure
         //     }
         //     return result;
         // }
-        
+
         public static void Main(string[] args)
         {
             StackUsingLinkedList objSLL = new StackUsingLinkedList();
@@ -73,11 +81,13 @@ namespace C__Data_Structure
 
         }
 
-        private class Node{
+        private class Node
+        {
             public int data;
             public Node next;
 
-            public Node(int data){
+            public Node(int data)
+            {
                 this.data = data;
             }
         }

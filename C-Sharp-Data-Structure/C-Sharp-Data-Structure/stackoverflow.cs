@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Text;
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure
 {
    public class stackoverflow
     {

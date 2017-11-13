@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 //Efficient appoarch to first implementation: NthElementFromEnd_1.cs
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class NthElementFromEnd_2
     {
@@ -29,9 +29,10 @@ namespace C__Data_Structure
                 return;
             }
             while(currentNode!= null){
-                Console.WriteLine(currentNode.data);
+                Console.Write(currentNode.data+"-> ");
                 currentNode = currentNode.next;
             }
+            Console.Write("null");
         }
 
         public int TraverseList(){
@@ -75,7 +76,7 @@ namespace C__Data_Structure
             nthObj.FindNthElement(99);
             //nthObj.Display();
 
-            //Console.WriteLine("Hello World!");
+            Console.ReadKey();
         }
 
         private class Node{

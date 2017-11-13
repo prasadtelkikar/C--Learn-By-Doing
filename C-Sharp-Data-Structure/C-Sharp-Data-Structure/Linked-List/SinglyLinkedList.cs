@@ -1,23 +1,25 @@
 //Implementation of basic functions of singly linked list. Example, Insert, Delete and length
 using System;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List
 {
     public class SinglyLinkedList
     {
         private int length;
         private Node head;
-        
-        public SinglyLinkedList(){
+
+        public SinglyLinkedList()
+        {
             length = 0;
             head = null;
         }
 
-        private void InsertAtFirst(int value){
-            if(head == null)
+        private void InsertAtFirst(int value)
+        {
+            if (head == null)
             {
                 head = InitializeLinkedListElement(value);
-            }   
+            }
             else
             {
                 Node element = InitializeLinkedListElement(value);
@@ -27,47 +29,52 @@ namespace C__Data_Structure
             length++;
         }
 
-        private void InsertAtEnd(int value){
+        private void InsertAtEnd(int value)
+        {
             Node currentNode = head;
             Node newNode = InitializeLinkedListElement(value);
 
-            while(currentNode.next != null)
+            while (currentNode.next != null)
                 currentNode = currentNode.next;
 
             currentNode.next = newNode;
             length++;
         }
 
-        private void InsertAtPosition(int value, int position){
+        private void InsertAtPosition(int value, int position)
+        {
             int index = 1;
             Node previousNode = head;
             Node currentNode = head;
             Node newNode = InitializeLinkedListElement(value);
 
-            if(position < 1)
+            if (position < 1)
             {
                 Console.WriteLine("Error due to improper position to add new node");
                 return;
             }
-            else if(position == 1 || currentNode == null){
-                    InsertAtFirst(value);
-                    length++;
-                    return;
+            else if (position == 1 || currentNode == null)
+            {
+                InsertAtFirst(value);
+                length++;
+                return;
             }
 
-                while(currentNode != null && index < position){
-                    index++;
-                    previousNode = currentNode;
-                    currentNode = currentNode.next;
-                }
-                previousNode.next = newNode;
-                newNode.next = currentNode;
+            while (currentNode != null && index < position)
+            {
+                index++;
+                previousNode = currentNode;
+                currentNode = currentNode.next;
+            }
+            previousNode.next = newNode;
+            newNode.next = currentNode;
             length++;
         }
 
-        private void DeleteFromFirst(){
+        private void DeleteFromFirst()
+        {
             Node currentNode = head;
-            if(head == null)
+            if (head == null)
                 return;
             else
             {
@@ -78,19 +85,20 @@ namespace C__Data_Structure
             length--;
         }
 
-        private void DeleteFromEnd(){
+        private void DeleteFromEnd()
+        {
             Node currentNode = head;
-            if(head == null)
+            if (head == null)
                 return;
-            
-            if(head.next == null)
+
+            if (head.next == null)
             {
                 head = null;
                 length--;
                 return;
             }
-            
-            while(currentNode.next.next != null)
+
+            while (currentNode.next.next != null)
                 currentNode = currentNode.next;
 
             Node temp = currentNode.next;
@@ -102,10 +110,11 @@ namespace C__Data_Structure
         private void DeleteFromPosition(int position)
         {
             int index = 1;
-            if(position < 1)
+            if (position < 1)
                 return;
-            
-            if(position == 1){
+
+            if (position == 1)
+            {
                 DeleteFromFirst();
                 length--;
                 return;
@@ -114,7 +123,8 @@ namespace C__Data_Structure
             Node previousNode = head;
             Node currentNode = head;
 
-            while(currentNode != null && index < position){
+            while (currentNode != null && index < position)
+            {
                 index++;
                 previousNode = currentNode;
                 currentNode = currentNode.next;
@@ -123,22 +133,23 @@ namespace C__Data_Structure
             previousNode.next = currentNode.next;
             temp = null;
             length--;
-            
+
         }
         private void DisplayList()
         {
             Node currentNode = head;
-            while(currentNode != null)
+            while (currentNode != null)
             {
-                Console.WriteLine(currentNode.data);
+                Console.Write(currentNode.data + "-> ");
                 currentNode = currentNode.next;
             }
+            Console.Write("null");
         }
 
         private int LengthOfList()
         {
             return length;
-            
+
             ////Alternate way
             // Node currentNode = head;
             // int count = 0;
@@ -150,7 +161,8 @@ namespace C__Data_Structure
             // return count;
         }
 
-        private Node InitializeLinkedListElement(int value){
+        private Node InitializeLinkedListElement(int value)
+        {
             return new Node(value);
         }
         public static void Main(string[] args)
@@ -162,39 +174,27 @@ namespace C__Data_Structure
             objSLL.InsertAtEnd(4);
             objSLL.InsertAtEnd(5);
             objSLL.InsertAtEnd(6);
-            
+
             objSLL.InsertAtPosition(99, 3);
-            
-            int length1 = objSLL.LengthOfList();
-            Console.WriteLine("Length of list :" +length1);
-            
+
             objSLL.DeleteFromFirst();
             objSLL.DeleteFromEnd();
-            
-            length1 = objSLL.LengthOfList();
-            Console.WriteLine("Length of list :" +length1);
-            
+
             objSLL.DeleteFromPosition(3);
 
-
-            length1 = objSLL.LengthOfList();
-            Console.WriteLine("Length of list :" +length1);
-            
-            objSLL.DisplayList();            
-            length1 = objSLL.LengthOfList();
-
-            
+            objSLL.DisplayList();
+            Console.ReadKey();
         }
-        
-    private class Node
+
+        private class Node
         {
             public int data = 0;
             public Node next = null;
-            
+
             public Node(int data)
             {
-            this.data = data;   
-            this.next = null;
+                this.data = data;
+                this.next = null;
             }
         }
     }

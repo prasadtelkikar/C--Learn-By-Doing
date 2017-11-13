@@ -1,18 +1,21 @@
 using System;
 
-namespace C__Data_Structure
+namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class NthElementFromEnd
     {
         Node head;
-        public NthElementFromEnd(){
+        public NthElementFromEnd()
+        {
             head = null;
         }
 
-        public void InsertAtFront(int value){
+        public void InsertAtFront(int value)
+        {
             Node newNode = new Node(value);
 
-            if(head == null){
+            if (head == null)
+            {
                 head = newNode;
                 return;
             }
@@ -22,52 +25,62 @@ namespace C__Data_Structure
         }
 
         //GeeksforGeeks: from end: length - position = element from end
-        public void FindNthNode(int position){
+        public void FindNthNode(int position)
+        {
             Node currentNode = head;
             int temp = position;
-            
-            if(currentNode == null){
+
+            if (currentNode == null)
+            {
                 Console.WriteLine("Empty list");
                 return;
             }
 
             int length = LengthOfList();
-            if(length < position){
+            if (length < position)
+            {
                 Console.WriteLine("fewer numbers of nodes in the list");
                 return;
             }
-            
+
             int indexFromFront = length - position;
 
-            for(int i = 0; i < indexFromFront; i++){
+            for (int i = 0; i < indexFromFront; i++)
+            {
                 currentNode = currentNode.next;
             }
             Console.WriteLine(currentNode.data);
         }
-        
-        public int LengthOfList(){
+
+        public int LengthOfList()
+        {
             Node currentNode = head;
             int count = 0;
-            if(currentNode == null)
+            if (currentNode == null)
                 return 0;
-            while(currentNode != null){
+            while (currentNode != null)
+            {
                 count++;
                 currentNode = currentNode.next;
-            }    
+            }
             return count;
         }
 
-        public void Display(){
+        public void Display()
+        {
             Node currentNode = head;
-            if(currentNode == null){
-                    Console.WriteLine("Empty list");
-                    }
-                else{
-                 do{
-                     Console.WriteLine(currentNode.data);
-                     currentNode = currentNode.next;
-                 }while(currentNode!= null);
-                }
+            if (currentNode == null)
+            {
+                Console.WriteLine("Empty list");
+            }
+            else
+            {
+                do
+                {
+                    Console.WriteLine(currentNode.data);
+                    currentNode = currentNode.next;
+                } while (currentNode != null);
+            }
         }
 
         public static void Main(string[] args)
@@ -79,14 +92,17 @@ namespace C__Data_Structure
             nth.InsertAtFront(3);
             nth.InsertAtFront(2);
             nth.InsertAtFront(1);
+
             nth.FindNthNode(7);
+            Console.ReadKey();
         }
-        
+
         private class Node
         {
             public int data;
             public Node next;
-            public Node(int data){
+            public Node(int data)
+            {
                 this.data = data;
             }
         }
