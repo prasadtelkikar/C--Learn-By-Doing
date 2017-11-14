@@ -10,6 +10,7 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
     {
         Node head;
         int length;
+
         public FindMiddleOfLinkedList_2()
         {
             head = null;
@@ -23,7 +24,7 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
 
             if(currentNode == null)
             {
-                head = currentNode;
+                head = newNode;
                 length++;
                 return;
             }
@@ -33,6 +34,25 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
 
             currentNode.next = newNode;
             length++;
+        }
+
+        public void FindMiddle()
+        {
+            Node fastNode = head;
+            Node slowNode = head;
+
+            if(fastNode == null)
+            {
+                Console.WriteLine("Error: Empty Linked list");
+                return;
+            }
+            while(fastNode != null && fastNode.next != null)
+            {
+                fastNode = fastNode.next.next;
+                slowNode = slowNode.next;
+            }
+
+            Console.WriteLine("Middle of linked list is : " + slowNode.data);
         }
 
         public void Display()
@@ -50,6 +70,23 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
                 currentNode = currentNode.next;
             }
             Console.WriteLine("null");
+        }
+
+        public static void Main(string[] args)
+        {
+            FindMiddleOfLinkedList_2 objFindMiddle = new FindMiddleOfLinkedList_2();
+            objFindMiddle.InsertAtEnd(1);
+            objFindMiddle.InsertAtEnd(2);
+            objFindMiddle.InsertAtEnd(3);
+            objFindMiddle.InsertAtEnd(4);
+            objFindMiddle.InsertAtEnd(5);
+            objFindMiddle.InsertAtEnd(6);
+            //objFindMiddle.InsertAtEnd(7);
+
+            objFindMiddle.Display();
+            objFindMiddle.FindMiddle();
+
+            Console.ReadKey();
         }
 
         private class Node
