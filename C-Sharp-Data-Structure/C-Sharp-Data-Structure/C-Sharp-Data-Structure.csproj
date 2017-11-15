@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.FindMiddleOfLinkedList_2</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.MergeTwoSortedListRecursion</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Linked-List-Problems\CheckListEvenOdd.cs" />
+    <Compile Include="Linked-List-Problems\DisplayLinkedListFromEnd.cs" />
     <Compile Include="Linked-List-Problems\FindIntersectingPoint.cs" />
     <Compile Include="Linked-List-Problems\FindIntersectingPoint_3.cs" />
     <Compile Include="Linked-List-Problems\FindIntersectingPoint_1.cs" />
@@ -52,6 +54,8 @@
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList.cs" />
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_1.cs" />
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_2.cs" />
+    <Compile Include="Linked-List-Problems\MergeTwoSortedList.cs" />
+    <Compile Include="Linked-List-Problems\MergeTwoSortedListRecursion.cs" />
     <Compile Include="Linked-List-Problems\ReverseLinkedListRecursive.cs" />
     <Compile Include="Linked-List\CircularLinkedList.cs" />
     <Compile Include="Linked-List-Problems\CyclicLinkedList.cs" />
