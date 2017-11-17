@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.SplitCircularLinkedList</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.stackoverflow</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Linked-List-Problems\CheckForPalindrome.cs" />
     <Compile Include="Linked-List-Problems\CheckListEvenOdd.cs" />
     <Compile Include="Linked-List-Problems\DisplayLinkedListFromEnd.cs" />
     <Compile Include="Linked-List-Problems\FindIntersectingPoint.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_2.cs" />
     <Compile Include="Linked-List-Problems\MergeTwoSortedList.cs" />
     <Compile Include="Linked-List-Problems\MergeTwoSortedListRecursion.cs" />
+    <Compile Include="Linked-List-Problems\ReverseKBlockOfNodes.cs" />
     <Compile Include="Linked-List-Problems\ReverseLinkedListRecursive.cs" />
     <Compile Include="Linked-List-Problems\ReverseListInPair.cs" />
     <Compile Include="Linked-List-Problems\ReverseListInPairs_1.cs" />
