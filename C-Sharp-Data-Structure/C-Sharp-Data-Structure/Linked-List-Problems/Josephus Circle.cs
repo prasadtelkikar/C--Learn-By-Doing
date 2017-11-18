@@ -51,7 +51,7 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
         public static void Main(string[] args)
         {
             Josephus_Circle jcircle = new Josephus_Circle();
-            jcircle.InsertAtFirst(*);
+            //jcircle.InsertAtFirst(*);
         }
         private class Node
         {

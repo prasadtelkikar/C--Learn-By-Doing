@@ -55,6 +55,7 @@
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList.cs" />
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_1.cs" />
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_2.cs" />
+    <Compile Include="Linked-List-Problems\Josephus Circle.cs" />
     <Compile Include="Linked-List-Problems\MergeTwoSortedList.cs" />
     <Compile Include="Linked-List-Problems\MergeTwoSortedListRecursion.cs" />
     <Compile Include="Linked-List-Problems\ReverseKBlockOfNodes.cs" />
@@ -82,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Linked-List-Problems\text.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
