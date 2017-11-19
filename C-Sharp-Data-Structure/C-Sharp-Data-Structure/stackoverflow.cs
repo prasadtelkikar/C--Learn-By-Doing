@@ -11,7 +11,7 @@ namespace C_Sharp_Data_Structure
         {
             stackoverflow s = new stackoverflow();
             s.CopyFile("orage");
-            BigRational b = new BigRational();
+            //BigRational b = new BigRational();
         }
 
         /// <summary>

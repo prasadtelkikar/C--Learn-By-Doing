@@ -8,49 +8,44 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class Josephus_Circle
     {
-        Node head;
-        int length;
-        public Josephus_Circle()
+        private Node InitializeNode(int data)
         {
-            head = null;
-            length = 0;
+            return new Node(data);
         }
-
-        public void InsertAtFirst(int data)
+        
+        //Recursive call to find winner
+        private int FindWinner(int n, int k)
         {
-            Node newNode = new Node(data);
-            if (head == null)
-            {
-                head = newNode;
-                length++;
-            }
+            if (n == 1)
+                return 0;
 
-            newNode.next = head;
-            head = newNode;
-            length++;
-        }
-
-        public void Display()
-        {
-            Node currentNode = head;
-
-            if (currentNode == null)
-            {
-                Console.WriteLine("Error: Empty linked list");
-                return;
-            }
-
-            while (currentNode != null)
-            {
-                Console.Write(currentNode.data + "-> ");
-                currentNode = currentNode.next;
-            }
-            Console.WriteLine("null");
+            //As in every turn one get executed, so n -1, always k will remain same. Jumping k positions so + k and 
+            // %n as it is circular and we need to get back to position in between 0 to n
+            return (FindWinner(n - 1, k) + k) % n;
         }
 
         public static void Main(string[] args)
         {
             Josephus_Circle jcircle = new Josephus_Circle();
+            Node fstNode = jcircle.InitializeNode(1);
+            Node sndNode = jcircle.InitializeNode(2);
+            Node trdNode = jcircle.InitializeNode(3);
+            Node fthNode = jcircle.InitializeNode(4);
+            Node fvthNode = jcircle.InitializeNode(5);
+            Node sxthNode = jcircle.InitializeNode(6);
+
+
+            fstNode.next = sndNode;
+            sndNode.next = trdNode;
+            trdNode.next = fthNode;
+            fthNode.next = fvthNode;
+            fvthNode.next = sxthNode;
+
+            sxthNode.next = fstNode;
+
+            int winner = jcircle.FindWinner(6, 2);
+            Console.WriteLine("Winner is" + winner);
+            Console.ReadKey();
             //jcircle.InsertAtFirst(*);
         }
         private class Node

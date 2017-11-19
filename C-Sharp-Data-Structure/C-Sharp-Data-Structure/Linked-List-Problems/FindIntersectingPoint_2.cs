@@ -8,12 +8,6 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class FindIntersectingPoint_2
     {
-        Node head;
-        public FindIntersectingPoint_2()
-        {
-            head = null;
-        }
-
         private Node InitializeNode(int data)
         {
             return new Node(data);

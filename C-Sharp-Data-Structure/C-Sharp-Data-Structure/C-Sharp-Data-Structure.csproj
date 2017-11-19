@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.stackoverflow</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.Josephus_Circle</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

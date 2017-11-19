@@ -7,13 +7,7 @@ using System.Threading.Tasks;
 namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class FindIntersectingPoint
-    {
-        Node head;
-        public FindIntersectingPoint()
-        {
-            head = null;
-        }
-        
+    {        
         private Node InitializeNode(int data)
         {
             return new Node(data);

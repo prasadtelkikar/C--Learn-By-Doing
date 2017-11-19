@@ -70,9 +70,7 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
         {
             Node fastNode = head;
             Node slowNode = head;
-            //Node head1 = null;
-            Node head2 = null;
-
+        
             if (head == null)
             {
                 Console.WriteLine("Error: Empty Linked list");
