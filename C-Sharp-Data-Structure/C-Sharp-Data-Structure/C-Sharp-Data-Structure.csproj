@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.Josephus_Circle</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.ArrangeEvenOdd</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Linked-List-Problems\ArrangeEvenOdd.cs" />
     <Compile Include="Linked-List-Problems\CheckForPalindrome.cs" />
     <Compile Include="Linked-List-Problems\CheckListEvenOdd.cs" />
     <Compile Include="Linked-List-Problems\DisplayLinkedListFromEnd.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_1.cs" />
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_2.cs" />
     <Compile Include="Linked-List-Problems\Josephus Circle.cs" />
+    <Compile Include="Linked-List-Problems\JosephusCircle_1.cs" />
     <Compile Include="Linked-List-Problems\MergeTwoSortedList.cs" />
     <Compile Include="Linked-List-Problems\MergeTwoSortedListRecursion.cs" />
     <Compile Include="Linked-List-Problems\ReverseKBlockOfNodes.cs" />

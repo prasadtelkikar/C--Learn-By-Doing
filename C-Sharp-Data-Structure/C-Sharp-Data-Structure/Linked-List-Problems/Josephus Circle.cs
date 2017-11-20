@@ -8,11 +8,21 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
 {
     public class Josephus_Circle
     {
+        Node head;
+        int length;
+        public Josephus_Circle()
+        {
+            head = null;
+            length = 0;
+        }
+
         private Node InitializeNode(int data)
         {
+            length++;
             return new Node(data);
         }
         
+
         //Recursive call to find winner
         private int FindWinner(int n, int k)
         {
@@ -24,6 +34,23 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
             return (FindWinner(n - 1, k) + k) % n;
         }
 
+        public void Display()
+        {
+            Node currentNode = head;
+
+            if(currentNode == null)
+            {
+                Console.WriteLine("Error: list is empty");
+                return;
+            }
+            do
+            {
+                Console.Write(currentNode.data + "-> ");
+                currentNode = currentNode.next;
+            } while (currentNode != head);
+            Console.WriteLine("null");
+        }
+
         public static void Main(string[] args)
         {
             Josephus_Circle jcircle = new Josephus_Circle();
@@ -33,7 +60,7 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
             Node fthNode = jcircle.InitializeNode(4);
             Node fvthNode = jcircle.InitializeNode(5);
             Node sxthNode = jcircle.InitializeNode(6);
-
+            int k = 2;
 
             fstNode.next = sndNode;
             sndNode.next = trdNode;
@@ -42,9 +69,14 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
             fvthNode.next = sxthNode;
 
             sxthNode.next = fstNode;
+            jcircle.head = fstNode;
 
-            int winner = jcircle.FindWinner(6, 2);
-            Console.WriteLine("Winner is" + winner);
+            jcircle.Display();
+
+            int winner = jcircle.FindWinner(jcircle.length, k);
+            //int winner = jcircle.FindWinner(30, 4);  // winner = 5
+            Console.WriteLine("Length of List: " + jcircle.length);
+            Console.WriteLine("Winner is = " + winner);
             Console.ReadKey();
             //jcircle.InsertAtFirst(*);
         }
@@ -52,7 +84,7 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
         {
             public int data;
             public Node next;
-
+                
             public Node(int data)
             {
                 this.data = data;
