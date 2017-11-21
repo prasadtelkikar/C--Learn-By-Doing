@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.ArrangeEvenOdd</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.ReorderLinkedList</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -56,10 +56,15 @@
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList.cs" />
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_1.cs" />
     <Compile Include="Linked-List-Problems\FindMiddleOfLinkedList_2.cs" />
+    <Compile Include="Linked-List-Problems\FindModularFromEnd.cs" />
+    <Compile Include="Linked-List-Problems\FindModularNodeFromBegin.cs" />
+    <Compile Include="Linked-List-Problems\FindNthRootElement.cs" />
     <Compile Include="Linked-List-Problems\Josephus Circle.cs" />
     <Compile Include="Linked-List-Problems\JosephusCircle_1.cs" />
+    <Compile Include="Linked-List-Problems\MergeTwoAscendingLists.cs" />
     <Compile Include="Linked-List-Problems\MergeTwoSortedList.cs" />
     <Compile Include="Linked-List-Problems\MergeTwoSortedListRecursion.cs" />
+    <Compile Include="Linked-List-Problems\ReorderLinkedList.cs" />
     <Compile Include="Linked-List-Problems\ReverseKBlockOfNodes.cs" />
     <Compile Include="Linked-List-Problems\ReverseLinkedListRecursive.cs" />
     <Compile Include="Linked-List-Problems\ReverseListInPair.cs" />

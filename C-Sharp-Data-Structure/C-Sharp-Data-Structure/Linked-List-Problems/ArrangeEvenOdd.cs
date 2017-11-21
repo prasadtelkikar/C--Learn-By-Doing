@@ -53,9 +53,53 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
             Console.WriteLine("null");
         }
 
-        public void ArrangeOddEven()
+        /*Source: GeeksForGeeks, Here iterating through each element of list, keeping track of list containing even, odd elements and tails */
+        private Node ArrangeOddEven()
         {
+            Node currentNode = head;
+            Node evenStart = null;
+            Node evenEnd = null;
+            Node oddStart = null;
+            Node oddEnd = null;
 
+            if (currentNode == null)
+                return null;
+
+            while(currentNode != null)
+            {
+                int data = currentNode.data;
+                if(data % 2 == 0)
+                {
+                    if(evenStart == null)
+                    {
+                        evenStart = currentNode;
+                        evenEnd = evenStart;
+                    }
+                    else
+                    {
+                        evenEnd.next = currentNode;
+                        evenEnd = evenEnd.next;
+                    }
+                }
+                else
+                {
+                    if (oddStart == null)
+                    {
+                        oddStart = currentNode;
+                        oddEnd = oddStart;
+                    }
+                    else
+                    {
+                        oddEnd.next = currentNode;
+                        oddEnd = oddEnd.next;
+                    }
+                }
+                currentNode = currentNode.next;
+            }
+            //End of list with null. **Important, otherwise it will create cyclic list
+            oddEnd.next = null;
+            evenEnd.next = oddStart;
+            return evenStart;
         }
 
         public static void Main(string[] args)
@@ -70,8 +114,12 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
             arrangeEO.InsertAtEnd(7);
             arrangeEO.InsertAtEnd(8);
 
+            Console.WriteLine("-----List before arrangement ----");
             arrangeEO.Display();
-            arrangeEO.ArrangeOddEven();
+            Node result = arrangeEO.ArrangeOddEven();
+            Console.WriteLine("-----List after arrangement ----");
+            arrangeEO.head = result;
+            arrangeEO.Display();
             Console.ReadKey();
         }
 
