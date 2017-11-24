@@ -55,10 +55,8 @@ namespace C_Sharp_Data_Structure.Linked_List_Problems
         {
             Node currentNode = head;
             Node fastNode = head;
-            Node fastEnd = null;
 
             Node slowNode = head;
-            Node result = null;
 
             if(currentNode == null)
             {

@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Linked_List_Problems.ReorderLinkedList</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.stackoverflow</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -87,12 +87,11 @@
     <Compile Include="stackoverflow.cs" />
     <Compile Include="Linked-List-Problems\StackUsingLinkedList.cs" />
     <Compile Include="Linked-List-Problems\StartOfCyclicList.cs" />
+    <Compile Include="Stack\StackUsingDynamicArray.cs" />
+    <Compile Include="Stack\StackUsingFixedArray.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="Linked-List-Problems\text.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
