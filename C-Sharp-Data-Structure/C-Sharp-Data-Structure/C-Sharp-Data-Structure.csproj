@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.stackoverflow</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack.StackUsingLinkedList</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -84,11 +84,13 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Linked-List-Problems\ReverseSinglyLinkedList.cs" />
     <Compile Include="Linked-List\SinglyLinkedList.cs" />
+    <Compile Include="Stack-Problems\CheckBalancingSymbols.cs" />
     <Compile Include="stackoverflow.cs" />
     <Compile Include="Linked-List-Problems\StackUsingLinkedList.cs" />
     <Compile Include="Linked-List-Problems\StartOfCyclicList.cs" />
     <Compile Include="Stack\StackUsingDynamicArray.cs" />
     <Compile Include="Stack\StackUsingFixedArray.cs" />
+    <Compile Include="Stack\StackUsingLinkedList.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -9,12 +9,12 @@ namespace C_Sharp_Data_Structure.Stack
     public class StackUsingDynamicArray
     {
         int top = -1;
-        int capacity = 0;
+        readonly int capacity = 10;
         int[] array;
 
-        public StackUsingDynamicArray()
+        public StackUsingDynamicArray(int capacity)
         {
-            capacity = 1;
+            this.capacity = capacity;
             array = new int[capacity];
         }
 
@@ -30,8 +30,9 @@ namespace C_Sharp_Data_Structure.Stack
 
         public int Pop()
         {
-
+            return 0;
         }
+
         public static void Main(string[] args)
         {
 
