@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack.StackUsingLinkedList</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack.StackUsingDynamicArray</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
