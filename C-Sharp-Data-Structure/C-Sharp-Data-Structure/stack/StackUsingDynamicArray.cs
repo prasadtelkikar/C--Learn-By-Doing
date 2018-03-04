@@ -61,7 +61,7 @@ namespace C_Sharp_Data_Structure.Stack
             stackDynamic.Push(2);
             stackDynamic.Push(3);
             stackDynamic.Push(4);
-            stackDynamic.Push(5);
+            stackDynamic.Push(5);   /*Dynamically increase size of array by 2 times*/
 
             Console.WriteLine(stackDynamic.Pop());
             Console.WriteLine(stackDynamic.Pop());
