@@ -42,6 +42,13 @@ namespace C_Sharp_Data_Structure.Stack_Problems
             return data;
         }
 
+        public char Peek()
+        {
+            if (IsEmptyStack())
+                throw new Exception("Underflow");
+            else
+                return head.data;
+        }
         public override string ToString()
         {
             if (top == -1)
