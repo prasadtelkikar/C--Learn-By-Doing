@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.InfixToPostfix</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.PostfixEvaluation</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -86,6 +86,7 @@
     <Compile Include="Linked-List-Problems\ReverseSinglyLinkedList.cs" />
     <Compile Include="Linked-List\SinglyLinkedList.cs" />
     <Compile Include="Stack-Problems\CheckBalancingSymbols.cs" />
+    <Compile Include="Stack-Problems\PostfixEvaluation.cs" />
     <Compile Include="Stack-Problems\StackLinkedList.cs" />
     <Compile Include="stackoverflow.cs" />
     <Compile Include="Linked-List-Problems\StackUsingLinkedList.cs" />
