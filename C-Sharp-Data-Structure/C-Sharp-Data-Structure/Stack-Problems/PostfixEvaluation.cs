@@ -11,29 +11,30 @@ namespace C_Sharp_Data_Structure.Stack_Problems
 {
     public class PostfixEvaluation
     {
-        StackLinkedList stack;
+        GenericStack<int> stack;
 
         public PostfixEvaluation()
         {
-            stack = new StackLinkedList();
+            stack = new GenericStack<int>();
         }
 
         public int EvaluateEquation(string equation)
         {
+            //Buggi code. Only works for 1 digit; need to work on multiple digits
             foreach(char ch in equation)
             {
                 if (Regex.IsMatch(ch.ToString(), "^[0-9]"))
                     stack.Push(ch);
                 else
                 {
-                    int firstElement = Int32.Parse(stack.Pop().ToString());
-                    int secondElement = Int32.Parse(stack.Pop().ToString());
+                    int firstElement = stack.Pop();
+                    int secondElement = stack.Pop();
 
                     int result = GetResult(firstElement, secondElement, ch);
-                    stack.Push(Char.Parse(result.ToString()));
+                    stack.Push(result);
                 }
             }
-            return Int32.Parse(stack.Pop().ToString());
+            return stack.Pop();
         }
 
         private int GetResult(int firstElement, int secondElement, char ch)
