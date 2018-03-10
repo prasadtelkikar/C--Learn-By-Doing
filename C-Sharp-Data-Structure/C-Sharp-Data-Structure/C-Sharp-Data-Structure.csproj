@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.PostfixEvaluation</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.GetMinimumFromStack</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Stack-Problems\GenericStack.cs" />
+    <Compile Include="Stack-Problems\GetMinimumFromStack.cs" />
+    <Compile Include="Stack-Problems\InfixExpression.cs" />
     <Compile Include="Stack-Problems\InfixToPostfix.cs" />
     <Compile Include="Linked-List-Problems\ArrangeEvenOdd.cs" />
     <Compile Include="Linked-List-Problems\CheckForPalindrome.cs" />

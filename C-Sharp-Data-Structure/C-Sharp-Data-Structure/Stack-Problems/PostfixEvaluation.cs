@@ -6,6 +6,7 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 /* Operand : +,*,/,-
  * Operator : 0-9
+ * Constraint element need to be space seperated
  */
 namespace C_Sharp_Data_Structure.Stack_Problems
 {
@@ -20,17 +21,19 @@ namespace C_Sharp_Data_Structure.Stack_Problems
 
         public int EvaluateEquation(string equation)
         {
-            //Buggi code. Only works for 1 digit; need to work on multiple digits
-            foreach(char ch in equation)
+            string[] elements = equation.Split(' ');
+            foreach (string element in elements)
             {
-                if (Regex.IsMatch(ch.ToString(), "^[0-9]"))
-                    stack.Push(ch);
+                int number = 0;
+                if (Int32.TryParse(element, out number))
+                {
+                    stack.Push(number);
+                }
                 else
                 {
-                    int firstElement = stack.Pop();
-                    int secondElement = stack.Pop();
-
-                    int result = GetResult(firstElement, secondElement, ch);
+                    int firstNumber = stack.Pop();
+                    int secondNumber = stack.Pop();
+                    int result = GetResult(firstNumber, secondNumber, Char.Parse(element));
                     stack.Push(result);
                 }
             }
