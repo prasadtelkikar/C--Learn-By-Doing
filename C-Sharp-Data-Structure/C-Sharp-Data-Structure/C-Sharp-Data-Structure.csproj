@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.GetMinimumFromStack</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.Palindrom</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,7 +45,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Stack-Problems\Palindrom.cs" />
     <Compile Include="Stack-Problems\GenericStack.cs" />
+    <Compile Include="Stack-Problems\GetMinimumFromStack-1.cs" />
     <Compile Include="Stack-Problems\GetMinimumFromStack.cs" />
     <Compile Include="Stack-Problems\InfixExpression.cs" />
     <Compile Include="Stack-Problems\InfixToPostfix.cs" />
