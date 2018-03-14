@@ -9,11 +9,10 @@ namespace C_Sharp_Data_Structure.Stack_Problems
     public class PalindromeUsingLinkedList
     {
         Node head;
-        int length;
 
         public PalindromeUsingLinkedList()
         {
-            length = 0;
+            head = null;
         }
 
         private Node CreateNode(int data)
@@ -69,8 +68,32 @@ namespace C_Sharp_Data_Structure.Stack_Problems
                 slowNode = slowNode.nextNode;
             }
 
-            Console.WriteLine("Middle node: " + slowNode.data);
+            Node reverseHead = ReverseList(slowNode.nextNode);
+            Node secondHalf = head;
+            while(reverseHead != null)
+            {
+                if (reverseHead.data != secondHalf.data)
+                    return false;
+                reverseHead = reverseHead.nextNode;
+                secondHalf = secondHalf.nextNode;
+            }
             return true;
+        }
+
+        private Node ReverseList(Node slowNode)
+        {
+            Node currentNode = slowNode;
+            Node previousNode = null;
+            Node nextNode = null;
+            while(currentNode != null)
+            {
+                nextNode = currentNode.nextNode;
+                currentNode.nextNode = previousNode;
+                previousNode = currentNode;
+                currentNode = nextNode;
+            }
+
+            return previousNode;
         }
 
         public void print()
@@ -95,14 +118,15 @@ namespace C_Sharp_Data_Structure.Stack_Problems
             linkedList.AddToLast(1);
             linkedList.AddToLast(2);
             linkedList.AddToLast(3);
-            linkedList.AddToLast(4);
-            linkedList.AddToLast(5);
+            linkedList.AddToLast(3);
+            linkedList.AddToLast(2);
+            linkedList.AddToLast(1);
             //linkedList.AddToLast(6);
 
             linkedList.print();
 
-            bool b = linkedList.IsPalindrome();
-            //Console.WriteLine("Hello world");
+            bool isPalindrome= linkedList.IsPalindrome();
+            Console.WriteLine(isPalindrome ? "String is palindrom" : "String is not palindrom");
             Console.ReadKey();
         }
 

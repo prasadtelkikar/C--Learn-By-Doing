@@ -10,12 +10,10 @@ namespace C_Sharp_Data_Structure.Stack_Problems
     {
         GenericStack<char> stackOperator;
         GenericStack<int> stackOperand;
-        int top;
         public InfixExpression()
         {
             stackOperator = new GenericStack<char>();
             stackOperand = new GenericStack<int>();
-            top = -1;
         }
 
         public static void Main(string[] args)

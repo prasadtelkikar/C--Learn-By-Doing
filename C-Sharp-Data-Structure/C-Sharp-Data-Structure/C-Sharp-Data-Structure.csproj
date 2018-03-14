@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.PalindromeUsingLinkedList</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.ReverseStack</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -92,7 +92,9 @@
     <Compile Include="Linked-List\SinglyLinkedList.cs" />
     <Compile Include="Stack-Problems\CheckBalancingSymbols.cs" />
     <Compile Include="Stack-Problems\PalindromeUsingLinkedList.cs" />
+    <Compile Include="Stack-Problems\PalindromeUsingStack.cs" />
     <Compile Include="Stack-Problems\PostfixEvaluation.cs" />
+    <Compile Include="Stack-Problems\ReverseStack.cs" />
     <Compile Include="Stack-Problems\StackLinkedList.cs" />
     <Compile Include="stackoverflow.cs" />
     <Compile Include="Linked-List-Problems\StackUsingLinkedList.cs" />
