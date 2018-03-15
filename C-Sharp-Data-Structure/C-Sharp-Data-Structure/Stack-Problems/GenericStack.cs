@@ -8,7 +8,7 @@ namespace C_Sharp_Data_Structure.Stack_Problems
 {
     public class GenericStack<T>
     {
-        int top;
+        public int top;
         Stack<T> head = null;
         public GenericStack()
         {
