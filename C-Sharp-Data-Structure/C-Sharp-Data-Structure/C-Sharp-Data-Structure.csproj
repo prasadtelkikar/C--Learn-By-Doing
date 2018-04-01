@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.TwoStacksOneArray</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.MStacksInOneArray</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Stack-Problems\MStacksInOneArray.cs" />
     <Compile Include="Stack-Problems\Palindrom.cs" />
     <Compile Include="Stack-Problems\GenericStack.cs" />
     <Compile Include="Stack-Problems\GetMinimumFromStack-1.cs" />
@@ -96,8 +97,8 @@
     <Compile Include="Stack-Problems\PostfixEvaluation.cs" />
     <Compile Include="Stack-Problems\ReverseStack.cs" />
     <Compile Include="Stack-Problems\StackLinkedList.cs" />
+    <Compile Include="Stack-Problems\ThreeStackOneArray.cs" />
     <Compile Include="Stack-Problems\TwoStacksOneArray.cs" />
-    <Compile Include="stackoverflow.cs" />
     <Compile Include="Linked-List-Problems\StackUsingLinkedList.cs" />
     <Compile Include="Linked-List-Problems\StartOfCyclicList.cs" />
     <Compile Include="Stack\StackUsingDynamicArray.cs" />
