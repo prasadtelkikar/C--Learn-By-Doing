@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.MStacksInOneArray</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.FindingSpans</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Stack-Problems\FindingSpans.cs" />
     <Compile Include="Stack-Problems\MStacksInOneArray.cs" />
     <Compile Include="Stack-Problems\Palindrom.cs" />
     <Compile Include="Stack-Problems\GenericStack.cs" />
