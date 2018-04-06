@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.FindingSpanUsingStack</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.LargestRectangleInHistogram</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
