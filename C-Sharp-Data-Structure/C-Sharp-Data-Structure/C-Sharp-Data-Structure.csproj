@@ -32,7 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.LargestRectangleInHistogram</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.LargestRectangleInHistogram_1</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Stack-Problems\FindingSpans.cs" />
     <Compile Include="Stack-Problems\FindingSpanUsingStack.cs" />
+    <Compile Include="Stack-Problems\LargestRectangleInHistogram-1.cs" />
     <Compile Include="Stack-Problems\LargestRectangleInHistogram.cs" />
     <Compile Include="Stack-Problems\MStacksInOneArray.cs" />
     <Compile Include="Stack-Problems\Palindrom.cs" />

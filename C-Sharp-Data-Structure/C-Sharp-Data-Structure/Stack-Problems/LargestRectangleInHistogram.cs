@@ -1,11 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace C_Sharp_Data_Structure.Stack_Problems
 {
+    //Largest area in histogram - bruteforce approach
+    //Input : 3 2 5 6 1 4 4 Output: 10
     public class LargestRectangleInHistogram
     {
         int[] input;
@@ -13,30 +11,32 @@ namespace C_Sharp_Data_Structure.Stack_Problems
         {
             this.input = input;
         }
+
         public int FindLargestHistogram()
         {
             int maxArea = int.MinValue;
-            for (int i = 0; i < input.Length - 1; i++)
+            for (int i = 0; i < input.Length-1; i++)
             {
-                int j = i + 1;
-                int count = 1;
-                while(j < input.Length && input[j] >= input[i])
+                int minValue = int.MaxValue;
+                for (int j = i+1; j < input.Length; j++)
                 {
-                    count++;
-                    j++;
+                    int temp = (input[i] > input[j]) ? input[j] : input[i];
+                    minValue = (temp > minValue) ? minValue : temp;
+                    int area = minValue * ((j + 1) - i);
+                    if (maxArea < area)
+                        maxArea = area;
                 }
-                int area = count * input[i];
-                maxArea = (maxArea < area) ? area : maxArea;
+                
             }
             return maxArea;
         }
+
         public static void Main(string[] args)
         {
             string[] temp = Console.ReadLine().Split(' ');
             int[] input = Array.ConvertAll(temp, int.Parse);
             LargestRectangleInHistogram largest = new LargestRectangleInHistogram(input);
-            Console.WriteLine("Maximum area:" + largest.FindLargestHistogram());
-            //Console.WriteLine("Hello world");
+            Console.WriteLine(largest.FindLargestHistogram());
             Console.ReadLine();
         }
     }
