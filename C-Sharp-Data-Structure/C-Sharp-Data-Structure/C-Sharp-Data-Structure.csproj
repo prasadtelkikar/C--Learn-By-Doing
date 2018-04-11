@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.WhetherStackGrows</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.ReplaceLargestElement</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -100,6 +100,8 @@
     <Compile Include="Stack-Problems\PalindromeUsingLinkedList.cs" />
     <Compile Include="Stack-Problems\PalindromeUsingStack.cs" />
     <Compile Include="Stack-Problems\PostfixEvaluation.cs" />
+    <Compile Include="Stack-Problems\RemoveAdjacent.cs" />
+    <Compile Include="Stack-Problems\ReplaceLargestElement.cs" />
     <Compile Include="Stack-Problems\ReverseStack.cs" />
     <Compile Include="Stack-Problems\StackLinkedList.cs" />
     <Compile Include="Stack-Problems\ThreeStackOneArray.cs" />
