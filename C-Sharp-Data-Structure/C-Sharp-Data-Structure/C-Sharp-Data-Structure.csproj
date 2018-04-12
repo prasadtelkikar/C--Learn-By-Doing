@@ -101,6 +101,7 @@
     <Compile Include="Stack-Problems\PalindromeUsingStack.cs" />
     <Compile Include="Stack-Problems\PostfixEvaluation.cs" />
     <Compile Include="Stack-Problems\RemoveAdjacent.cs" />
+    <Compile Include="Stack-Problems\ReplaceLargestElement-1.cs" />
     <Compile Include="Stack-Problems\ReplaceLargestElement.cs" />
     <Compile Include="Stack-Problems\ReverseStack.cs" />
     <Compile Include="Stack-Problems\StackLinkedList.cs" />
