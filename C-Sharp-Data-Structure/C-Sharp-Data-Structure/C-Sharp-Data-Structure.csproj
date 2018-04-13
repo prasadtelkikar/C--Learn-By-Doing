@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Stack_Problems.ReplaceLargestElement</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Queue.ArrayAsQueue</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Queue\ArrayAsQueue.cs" />
     <Compile Include="Stack-Problems\FindingSpans.cs" />
     <Compile Include="Stack-Problems\FindingSpanUsingStack.cs" />
     <Compile Include="Stack-Problems\LargestRectangleInHistogram-1.cs" />
