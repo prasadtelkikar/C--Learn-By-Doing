@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Queue.QueueSimpleArrayImplementation</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Queue.QueueDynamicArrayImplementation</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Queue\ArrayAsQueue.cs" />
+    <Compile Include="Queue\QueueDynamicArrayImplementation.cs" />
     <Compile Include="Queue\QueueSimpleArrayImplementation.cs" />
     <Compile Include="Stack-Problems\FindingSpans.cs" />
     <Compile Include="Stack-Problems\FindingSpanUsingStack.cs" />
