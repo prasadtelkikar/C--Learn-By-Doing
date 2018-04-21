@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Queue.QueueDynamicArrayImplementation</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Queue_Problems.MaxInSlideWindow</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,9 +46,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Queue-Problems\MaxInSlideWindow.cs" />
+    <Compile Include="Queue-Problems\ReversingQueue.cs" />
+    <Compile Include="Queue-Problems\StackUsingTwoQueues.cs" />
     <Compile Include="Queue\ArrayAsQueue.cs" />
     <Compile Include="Queue\QueueDynamicArrayImplementation.cs" />
     <Compile Include="Queue\QueueSimpleArrayImplementation.cs" />
+    <Compile Include="Queue\QueueUsingLinkedList.cs" />
     <Compile Include="Stack-Problems\FindingSpans.cs" />
     <Compile Include="Stack-Problems\FindingSpanUsingStack.cs" />
     <Compile Include="Stack-Problems\LargestRectangleInHistogram-1.cs" />
@@ -103,6 +107,7 @@
     <Compile Include="Stack-Problems\PalindromeUsingLinkedList.cs" />
     <Compile Include="Stack-Problems\PalindromeUsingStack.cs" />
     <Compile Include="Stack-Problems\PostfixEvaluation.cs" />
+    <Compile Include="Queue-Problems\QueueUsingTwoStacks.cs" />
     <Compile Include="Stack-Problems\RemoveAdjacent.cs" />
     <Compile Include="Stack-Problems\ReplaceLargestElement-1.cs" />
     <Compile Include="Stack-Problems\ReplaceLargestElement.cs" />
@@ -120,5 +125,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
