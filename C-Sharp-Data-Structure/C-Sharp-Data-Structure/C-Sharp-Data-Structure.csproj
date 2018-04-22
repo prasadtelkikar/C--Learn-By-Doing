@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Queue_Problems.MaxInSlideWindow</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Queue_Problems.KElementReverse</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -46,9 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Queue-Problems\KElementReverse.cs" />
     <Compile Include="Queue-Problems\MaxInSlideWindow.cs" />
     <Compile Include="Queue-Problems\ReversingQueue.cs" />
     <Compile Include="Queue-Problems\StackUsingTwoQueues.cs" />
+    <Compile Include="Queue-Problems\SuccessivePairInStack.cs" />
     <Compile Include="Queue\ArrayAsQueue.cs" />
     <Compile Include="Queue\QueueDynamicArrayImplementation.cs" />
     <Compile Include="Queue\QueueSimpleArrayImplementation.cs" />
