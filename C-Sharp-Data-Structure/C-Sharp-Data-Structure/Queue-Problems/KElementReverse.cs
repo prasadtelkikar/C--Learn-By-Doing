@@ -50,10 +50,43 @@ namespace C_Sharp_Data_Structure.Queue_Problems
             top--;
             return data;
         }
-        //Going to sleep, will complete it tomorrow...
+
+        public void EnQueue(int data)
+        {
+            QueueIndex newNode = new QueueIndex(data);
+            if (IsEmptyQueue())
+            {
+                headQueue.rearIndex = newNode;
+                headQueue.frontIndex = headQueue.rearIndex;
+            }
+
+            headQueue.rearIndex.nextNode = newNode;
+            headQueue.rearIndex = headQueue.rearIndex.nextNode;
+        }
+
+        public int DeQueue()
+        {
+            if (IsEmptyQueue())
+            {
+                throw new Exception("Empty queue");
+            }
+            int data = headQueue.frontIndex.data;
+            headQueue.frontIndex = headQueue.frontIndex.nextNode;
+            return data;
+        }
+        
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
+            KElementReverse kthElement = new KElementReverse();
+            Console.WriteLine("Enter array as a queue");
+            int[] arr = Array.ConvertAll(Console.ReadLine().Split(' '), int.Parse);
+            for (int i = 0; i < arr.Length; i++)
+            {
+                kthElement.EnQueue(arr[i]);
+            }
+            Console.WriteLine("Enter size to reverse from front");
+            int kthLength = Convert.ToInt32(Console.ReadLine());
+            //Need to complete function over here
             Console.ReadKey();
         }
 
