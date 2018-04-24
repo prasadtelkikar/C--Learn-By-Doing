@@ -11,9 +11,11 @@ namespace C_Sharp_Data_Structure.Queue_Problems
         private Stack headStack;
         private Queue headQueue;
         private int top;
+        private int queueSize;
         public KElementReverse()
         {
             top = -1;
+            queueSize = 0;
             headQueue = new Queue();
         }
         
@@ -24,7 +26,7 @@ namespace C_Sharp_Data_Structure.Queue_Problems
 
         public bool IsEmptyQueue()
         {
-            return (headQueue.frontIndex == null);
+            return (queueSize == 0);
         }
 
         public void Push(int data)
@@ -58,10 +60,13 @@ namespace C_Sharp_Data_Structure.Queue_Problems
             {
                 headQueue.rearIndex = newNode;
                 headQueue.frontIndex = headQueue.rearIndex;
+                queueSize++;
+                return;
             }
 
             headQueue.rearIndex.nextNode = newNode;
             headQueue.rearIndex = headQueue.rearIndex.nextNode;
+            queueSize++;
         }
 
         public int DeQueue()
@@ -72,6 +77,7 @@ namespace C_Sharp_Data_Structure.Queue_Problems
             }
             int data = headQueue.frontIndex.data;
             headQueue.frontIndex = headQueue.frontIndex.nextNode;
+            queueSize--;
             return data;
         }
         
@@ -86,8 +92,43 @@ namespace C_Sharp_Data_Structure.Queue_Problems
             }
             Console.WriteLine("Enter size to reverse from front");
             int kthLength = Convert.ToInt32(Console.ReadLine());
+            kthElement.ReverseFirstKElement(kthLength);
+            kthElement.Display();
             //Need to complete function over here
             Console.ReadKey();
+        }
+
+        private void Display()
+        {
+            Queue temp = headQueue;
+            if (IsEmptyQueue())
+                throw new Exception("Queue is empty");
+            Console.Write("Front -> ");
+
+            while (temp.frontIndex != temp.rearIndex)
+            {
+                Console.Write(temp.frontIndex.data + "-> ");
+                temp.frontIndex = temp.frontIndex.nextNode;
+            }
+            Console.WriteLine("Rear");
+        }
+        
+        private void ReverseFirstKElement(int kthLength)
+        {
+            if (queueSize == 0)
+                throw new Exception("Queue is empty");
+            if (kthLength > queueSize)
+                throw new Exception("Wrong input");
+
+            for (int i = 0; i < kthLength; i++)
+                Push(DeQueue());
+
+            for (int i = 0; i < kthLength; i++)
+                EnQueue(Pop());
+
+            for (int i = 0; i < (queueSize - kthLength); i++)
+                EnQueue(DeQueue());
+
         }
 
         private class Stack

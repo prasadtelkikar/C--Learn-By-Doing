@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Queue_Problems.KElementReverse</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Queue_Problems.SequenceOfInterleavePairs</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -49,6 +49,7 @@
     <Compile Include="Queue-Problems\KElementReverse.cs" />
     <Compile Include="Queue-Problems\MaxInSlideWindow.cs" />
     <Compile Include="Queue-Problems\ReversingQueue.cs" />
+    <Compile Include="Queue-Problems\SequenceOfInterleavePairs.cs" />
     <Compile Include="Queue-Problems\StackUsingTwoQueues.cs" />
     <Compile Include="Queue-Problems\SuccessivePairInStack.cs" />
     <Compile Include="Queue\ArrayAsQueue.cs" />
