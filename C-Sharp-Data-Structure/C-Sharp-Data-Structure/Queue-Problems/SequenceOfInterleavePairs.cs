@@ -94,21 +94,48 @@ namespace C_Sharp_Data_Structure.Queue_Problems
                 return;
             int halfSize = Length / 2;
 
+            //Stack = (top) 15 ->14 ->13 -> 12 -> 11 Queue = (front) 16 -> 17 -> 18 -> 19 -> 20 
             for (int i = 0; i < halfSize; i++)
                 Push(DeQueue());
 
+            //Queue = 16 ->17 ->18 ->19 ->20 ->15 ->14 ->13 ->12 ->11
             while (!IsEmptyStack())
                 EnQueue(Pop());
 
+            //Queue 15 ->14 ->13 ->12 ->11 ->16 ->17 ->18 ->19 ->20
             for (int i = 0; i < halfSize; i++)
                 EnQueue(DeQueue());
+            
+            //Stack 11 -> 12 ->13 ->14 ->15 Queue 16 ->17 ->18 ->19 ->20
+            for (int i = 0; i < halfSize; i++)
+                Push(DeQueue());
 
+            //Resultant Queue = 11 ->16 ->12 ->17 ->13 ->18 ->19 ->20
             while (!IsEmptyStack())
             {
+                //For 11, 12, 13, 14, 15
                 EnQueue(Pop());
+                //For 16, 17, 18, 19, 20
                 EnQueue(DeQueue());
             }
         }
+
+        public void Display()
+        {
+            QueueIndex iterator = headQueue.frontIndex;
+            if (IsEmptyQueue())
+            {
+                throw new Exception("Empty queue");
+            }
+            Console.Write("Front ->");
+            while(iterator != null)
+            {
+                Console.Write(iterator.data + " ->");
+                iterator = iterator.nextNode;
+            }
+            Console.Write("End");
+        }
+
         public static void Main(string[] args)
         {
             SequenceOfInterleavePairs sequence = new SequenceOfInterleavePairs();
@@ -125,8 +152,8 @@ namespace C_Sharp_Data_Structure.Queue_Problems
 
             //TODO: Need to work on this function
             sequence.SequenceOfInterleavePair();
-
-            Console.WriteLine("Hello world");
+            sequence.Display();
+            //Console.WriteLine("Hello world");
             Console.ReadKey();
         }
 
