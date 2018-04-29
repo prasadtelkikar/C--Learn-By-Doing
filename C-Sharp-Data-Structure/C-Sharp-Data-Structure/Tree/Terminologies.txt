@@ -1,0 +1,5 @@
+﻿Root of tree: Root of tree is the node with no parents.
+Edges of tree: Edges of tree is link which is used to connect parent to child.
+Leaf node: Node with no children is called as leaf node.
+Siblings: Nodes having same parent are called as siblings.
+Level of Node: Set of all nodes at given depth is called as level of node.
