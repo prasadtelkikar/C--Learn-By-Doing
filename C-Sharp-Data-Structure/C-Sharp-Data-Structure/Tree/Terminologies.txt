@@ -3,3 +3,11 @@ Edges of tree: Edges of tree is link which is used to connect parent to child.
 Leaf node: Node with no children is called as leaf node.
 Siblings: Nodes having same parent are called as siblings.
 Level of Node: Set of all nodes at given depth is called as level of node.
+Depth of node: The depth of a node is length of path from root to the node.
+Height of Node: Height of node is the length of path from that node to the deepest node.
+The height of a tree is the length of path from root to the deepest node in the tree.
+Skew trees: If every node in a tree has only one child(except leaf nodes) then we call such trees skew trees.
+If every node has only left child, then  we call them left skew tree. If every node has only right child, then we call them right skew tree.
+
+Strict binary tree: A binary tree is called strict binary tree, if each node has exactly two or no children.
+Full binary tree: A binary tree is called full binary tree, if each node has exactly two children and all leaf nodes are at same level.

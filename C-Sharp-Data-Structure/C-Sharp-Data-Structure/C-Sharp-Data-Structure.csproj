@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Queue_Problems.SequenceOfInterleavePairs</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Tree.PreOrder</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -124,10 +124,16 @@
     <Compile Include="Stack\StackUsingDynamicArray.cs" />
     <Compile Include="Stack\StackUsingFixedArray.cs" />
     <Compile Include="Stack\StackUsingLinkedList.cs" />
+    <Compile Include="Tree\InsertNodeToTree.cs" />
+    <Compile Include="Tree\InOrder.cs" />
+    <Compile Include="Tree\PreOrder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup />
+  <ItemGroup>
+    <Content Include="Tree\Terminologies.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
