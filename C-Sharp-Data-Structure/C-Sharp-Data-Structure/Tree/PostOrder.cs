@@ -9,11 +9,32 @@ namespace C_Sharp_Data_Structure.Tree
     public class PostOrder
     {
         private BinaryTreeNode bstRoot;
-        
+        private StackNode stackTop;
+        public int top;
+        public PostOrder()
+        {
+            top = -1;
+        }
+
         #region Stack operations
+        public bool IsStackEmpty()
+        {
+            return (top == -1);
+        }
+
         private void Push(BinaryTreeNode node)
         {
-            //TODO: complete it.
+            StackNode newNode = new StackNode(node);
+            if (IsStackEmpty())
+            {
+                stackTop = newNode;
+                top++;
+                return;
+            }
+            StackNode oldHead = stackTop;
+            newNode.nextNode = oldHead;
+            stackTop = newNode;
+            top++;
         }
         #endregion
 
