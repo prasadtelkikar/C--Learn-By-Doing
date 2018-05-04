@@ -36,6 +36,17 @@ namespace C_Sharp_Data_Structure.Tree
             stackTop = newNode;
             top++;
         }
+
+        private BinaryTreeNode Pop()
+        {
+            if (IsStackEmpty())
+                throw new Exception("Stack is empty");
+            BinaryTreeNode temp = stackTop.data;
+            stackTop = stackTop.nextNode;
+            top--;
+            return temp;
+        }
+
         #endregion
 
         #region Queue operations
@@ -80,6 +91,11 @@ namespace C_Sharp_Data_Structure.Tree
             }
         }
 
+        //TODO: Non-Recursive appoach 
+        public void NonRecursivePostOrder()
+        {
+
+        }
         #endregion
 
         //Tests are remaining
