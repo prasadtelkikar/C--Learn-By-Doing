@@ -10,7 +10,14 @@ namespace C_Sharp_Data_Structure.Tree
     {
         private BinaryTreeNode rootNode;
         private Queue head;
-
+        #region constructor
+        public LevelOrderTraversal()
+        {
+            head = new Queue();
+            head.frontNode = null;
+            head.rearNode = null;
+        }
+        #endregion constructor
         #region Queue Operations
 
         public bool IsEmptyQueue()
@@ -24,7 +31,8 @@ namespace C_Sharp_Data_Structure.Tree
             if (IsEmptyQueue())
             {
                 head.frontNode = newQueueNode;
-                head.rearNode.data = newNode;
+                head.rearNode = head.frontNode;
+                return;
             }
             head.rearNode.nextNode = newQueueNode;
             head.rearNode = head.rearNode.nextNode;
@@ -40,14 +48,97 @@ namespace C_Sharp_Data_Structure.Tree
         }
 
         #endregion Queue Operations
-        //TODO
-        #region Tree
+
+        #region Binary tree operations
+        private BinaryTreeNode CreateNewNode(int data)
+        {
+            return new BinaryTreeNode(data);
+        }
+
+        public void AddNewNode(int data)
+        {
+            BinaryTreeNode newNode = new BinaryTreeNode(data);
+            if(rootNode == null)
+            {
+                rootNode = newNode;
+                return;
+            }
+            BinaryTreeNode previousNode = null;
+            BinaryTreeNode currentNode = rootNode;
+            while (currentNode != null)
+            {
+                previousNode = currentNode;
+                if (currentNode.data > data)
+                    currentNode = currentNode.leftNode;
+                else
+                    currentNode = currentNode.rightNode;
+            }
+            if (previousNode.data > data)
+                previousNode.leftNode = newNode;
+            else
+                previousNode.rightNode = newNode;
+        }
+
+        public void DisplayLevelOrderTraversal()
+        {
+            if (head.frontNode != null)
+                return;
+
+            BinaryTreeNode temp = rootNode;
+            Enqueue(temp);
+            while (!IsEmptyQueue())
+            {
+                BinaryTreeNode deQueuedElement = DeQueue();
+                Console.Write(deQueuedElement.data + " ");
+
+                if (deQueuedElement.leftNode != null)
+                {
+                    //temp = deQueuedElement.
+                    Enqueue(deQueuedElement.leftNode);
+                }
+                if (deQueuedElement.rightNode != null)
+                    Enqueue(deQueuedElement.rightNode);
+            }
+        }
+        #endregion Binary tree operations
+
+        #region Main function
+        public static void Main(string[] args)
+        {
+            LevelOrderTraversal levelOrder = new LevelOrderTraversal();
+            levelOrder.AddNewNode(50);
+            levelOrder.AddNewNode(30);
+            levelOrder.AddNewNode(20);
+            levelOrder.AddNewNode(40);
+            levelOrder.AddNewNode(70);
+            levelOrder.AddNewNode(80);
+            levelOrder.AddNewNode(60);
+
+            levelOrder.DisplayLevelOrderTraversal();
+            Console.ReadKey();
+            /* inOrderInstance.InsertNewNode(50);
+             inOrderInstance.InsertNewNode(30);
+             inOrderInstance.InsertNewNode(20);
+             inOrderInstance.InsertNewNode(40);
+             inOrderInstance.InsertNewNode(70);
+             inOrderInstance.InsertNewNode(80);
+             inOrderInstance.InsertNewNode(60);*/
+        }
+        #endregion Main function
+
         #region Binary Tree node class
         private class BinaryTreeNode
         {
             public int data;
             public BinaryTreeNode leftNode;
             public BinaryTreeNode rightNode;
+
+            public BinaryTreeNode(int data)
+            {
+                this.data = data;
+                leftNode = null;
+                rightNode = null;
+            }
         }
         #endregion  Binary Tree node class
 
