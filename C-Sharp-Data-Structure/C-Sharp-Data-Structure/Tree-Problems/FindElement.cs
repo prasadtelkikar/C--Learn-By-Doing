@@ -9,6 +9,13 @@ namespace C_Sharp_Data_Structure.Tree_Problems
     public class FindElement
     {
         private BSTNode rootNode;
+        public StringBuilder sb;
+
+        public FindElement()
+        {
+            sb = new StringBuilder();
+        }
+
         private int FindMaxElement(BSTNode currentNode)
         {
             int max = int.MinValue;
@@ -31,7 +38,29 @@ namespace C_Sharp_Data_Structure.Tree_Problems
             return max;
         }
 
-        
+        private int? FindMaxElementUsingInfixOrder(BSTNode root)
+        {
+            InfixOrder(root);
+            if (!string.IsNullOrEmpty(sb.ToString()))
+            {
+                //Trim is used to remove last empty space.
+                int[] treeElements = Array.ConvertAll(sb.ToString().Trim().Split(' '), int.Parse);
+                return treeElements.Max();
+            }
+            return null;
+        }
+
+        private void InfixOrder(BSTNode root)
+        {
+            if(root != null)
+            {
+                InfixOrder(root.leftNode);
+                sb.Append(root.data+" ");
+                Console.WriteLine(root.data + " ");
+                InfixOrder(root.rightNode);
+            }
+        }
+
         public static void Main(string[] args)
         {
             FindElement findElement = new FindElement();
@@ -46,8 +75,11 @@ namespace C_Sharp_Data_Structure.Tree_Problems
             findElement.rootNode.rightNode.leftNode = new BSTNode(6);
             findElement.rootNode.rightNode.rightNode = new BSTNode(7);
 
-            int maxValue = findElement.FindMaxElement(findElement.rootNode);
-            Console.WriteLine("Max element from tree: " + maxValue);
+            //int maxValue = findElement.FindMaxElement(findElement.rootNode);
+            int? maxValueIO = findElement.FindMaxElementUsingInfixOrder(findElement.rootNode);
+            Console.WriteLine(maxValueIO.HasValue ? string.Format("{0} is max element from tree", maxValueIO) : "Processing error");
+
+            //Console.WriteLine("Max element from tree: " + maxValue);
             Console.ReadKey();
         }
 
