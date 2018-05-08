@@ -125,6 +125,7 @@
     <Compile Include="Stack\StackUsingFixedArray.cs" />
     <Compile Include="Stack\StackUsingLinkedList.cs" />
     <Compile Include="Tree-Problems\FindElement.cs" />
+    <Compile Include="Tree-Problems\FindElementFromTree.cs" />
     <Compile Include="Tree-Problems\FindElementNonRecursion.cs" />
     <Compile Include="Tree\InsertNodeToTree.cs" />
     <Compile Include="Tree\InOrder.cs" />

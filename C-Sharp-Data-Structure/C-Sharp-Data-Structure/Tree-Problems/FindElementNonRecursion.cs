@@ -26,7 +26,7 @@ namespace C_Sharp_Data_Structure.Tree_Problems
             {
                 //Enqueue first element
                 EnQueue(rootNode);
-                while (IsQueueEmpty())
+                while (!IsQueueEmpty())
                 {
                     //Dequeue element
                     BSTNode deQueuedElement = DeQueue();
@@ -49,7 +49,19 @@ namespace C_Sharp_Data_Structure.Tree_Problems
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello world; TODO: Input binary tree and testing of functions");
+            FindElementNonRecursion findElement = new FindElementNonRecursion();
+            
+            findElement.rootNode = new BSTNode(1);
+            findElement.rootNode.leftNode = new BSTNode(2);
+            findElement.rootNode.rightNode = new BSTNode(3);
+            findElement.rootNode.leftNode.leftNode = new BSTNode(4);
+            findElement.rootNode.leftNode.rightNode = new BSTNode(5);
+            findElement.rootNode.rightNode.leftNode = new BSTNode(6);
+            findElement.rootNode.rightNode.rightNode = new BSTNode(7);
+
+            int maxValue = findElement.FindMax();
+            Console.WriteLine("Max value from tree: " + maxValue);
+            //Console.WriteLine("Hello world; TODO: Input binary tree and testing of functions");
             Console.ReadKey();
         }
 
