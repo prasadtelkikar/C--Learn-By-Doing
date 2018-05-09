@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.FindElementNonRecursion</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.FindElementFromTree</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -126,6 +126,7 @@
     <Compile Include="Stack\StackUsingLinkedList.cs" />
     <Compile Include="Tree-Problems\FindElement.cs" />
     <Compile Include="Tree-Problems\FindElementFromTree.cs" />
+    <Compile Include="Tree-Problems\FindElementFromTreeNonRecusive.cs" />
     <Compile Include="Tree-Problems\FindElementNonRecursion.cs" />
     <Compile Include="Tree\InsertNodeToTree.cs" />
     <Compile Include="Tree\InOrder.cs" />
