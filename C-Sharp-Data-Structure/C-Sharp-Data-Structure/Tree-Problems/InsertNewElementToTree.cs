@@ -17,11 +17,6 @@ namespace C_Sharp_Data_Structure.Tree_Problems
             head.frontIndex = null;
             head.rearIndex = null;
         }
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Hello world");
-            Console.ReadKey();
-        }
 
         public bool IsQueueEmpty()
         {
@@ -35,9 +30,10 @@ namespace C_Sharp_Data_Structure.Tree_Problems
 
         private void EnQueue(BSTNode newNode)
         {
+            QueueNode newQNode = new QueueNode(newNode);
             if (IsQueueEmpty())
             {
-                head.rearIndex.data = newNode;
+                head.rearIndex = newQNode;
                 head.frontIndex = head.rearIndex;
                 return;
             }
@@ -56,10 +52,65 @@ namespace C_Sharp_Data_Structure.Tree_Problems
             head.frontIndex = head.frontIndex.nextNode;
             return temp;
         }
+
         public void InsertNewNode(int data)
         {
+            BSTNode newNode = new BSTNode(data);
 
+            if(rootNode == null)
+            {
+                rootNode = newNode;
+                return;
+            }
+            EnQueue(rootNode);
+            while (!IsQueueEmpty())
+            {
+                BSTNode temp = DeQueue();
+                if (temp.leftNode != null)
+                    EnQueue(temp.leftNode);
+                else
+                {
+                    temp.leftNode = newNode;
+                    return;
+                }
+
+                if(temp.rightNode != null)
+                    EnQueue(temp.rightNode);
+                else
+                {
+                    temp.rightNode = newNode;
+                    return;
+                }
+            }
         }
+
+        public static void Main(string[] args)
+        {
+            InsertNewElementToTree insertToTree = new InsertNewElementToTree();
+            insertToTree.rootNode = new BSTNode(1);
+            insertToTree.rootNode.leftNode = new BSTNode(2);
+            insertToTree.rootNode.rightNode = new BSTNode(3);
+            insertToTree.rootNode.leftNode.leftNode = new BSTNode(4);
+            insertToTree.rootNode.leftNode.rightNode = new BSTNode(5);
+            insertToTree.rootNode.rightNode.leftNode = new BSTNode(6);
+            insertToTree.rootNode.rightNode.rightNode = new BSTNode(7);
+
+            insertToTree.InsertNewNode(10);
+            insertToTree.DisplayTreeInfixOrder(insertToTree.rootNode);
+            Console.WriteLine("End");
+            Console.ReadKey();
+        }
+
+        private void DisplayTreeInfixOrder(BSTNode rootNode)
+        {
+            if(rootNode!= null)
+            {
+                DisplayTreeInfixOrder(rootNode.leftNode);
+                Console.Write(rootNode.data + " ->");
+                DisplayTreeInfixOrder(rootNode.rightNode);
+            }
+        }
+
         private class QueueNode
         {
             public BSTNode data;
@@ -80,11 +131,13 @@ namespace C_Sharp_Data_Structure.Tree_Problems
         private class BSTNode
         {
             public int data;
-            public BSTNode nextNode;
+            public BSTNode leftNode;
+            public BSTNode rightNode;
             public BSTNode(int data)
             {
                 this.data = data;
-                nextNode = null;
+                leftNode = null;
+                rightNode = null;
             }
         }
     }
