@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.LevelOrderReverse</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.FindHeightOfTree</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -124,10 +124,12 @@
     <Compile Include="Stack\StackUsingDynamicArray.cs" />
     <Compile Include="Stack\StackUsingFixedArray.cs" />
     <Compile Include="Stack\StackUsingLinkedList.cs" />
+    <Compile Include="Tree-Problems\DeleteBinaryTree.cs" />
     <Compile Include="Tree-Problems\FindElement.cs" />
     <Compile Include="Tree-Problems\FindElementFromTree.cs" />
     <Compile Include="Tree-Problems\FindElementFromTreeNonRecusive.cs" />
     <Compile Include="Tree-Problems\FindElementNonRecursion.cs" />
+    <Compile Include="Tree-Problems\FindHeightOfTree.cs" />
     <Compile Include="Tree-Problems\InsertNewElementToTree.cs" />
     <Compile Include="Tree-Problems\LevelOrderReverse.cs" />
     <Compile Include="Tree-Problems\SizeOfBinaryTree-1.cs" />
@@ -144,6 +146,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="TODOs.txt" />
     <Content Include="Tree\Terminologies.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

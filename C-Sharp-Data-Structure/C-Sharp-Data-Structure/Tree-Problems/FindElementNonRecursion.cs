@@ -61,7 +61,6 @@ namespace C_Sharp_Data_Structure.Tree_Problems
 
             int maxValue = findElement.FindMax();
             Console.WriteLine("Max value from tree: " + maxValue);
-            //Console.WriteLine("Hello world; TODO: Input binary tree and testing of functions");
             Console.ReadKey();
         }
 
