@@ -4,3 +4,4 @@
  - Reverse linked list recursive
  - Reorder linked list
  - Find nth root element
+ - DeleteNodeFromBST

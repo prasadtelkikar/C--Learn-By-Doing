@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.DeleteNodeFromBST</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.FullNodes</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -133,8 +133,10 @@
     <Compile Include="Tree-Problems\FindElementNonRecursion.cs" />
     <Compile Include="Tree-Problems\FindHeightOfTree.cs" />
     <Compile Include="Tree-Problems\FindHeightOfTreeNonRecursive.cs" />
+    <Compile Include="Tree-Problems\FullNodes.cs" />
     <Compile Include="Tree-Problems\InsertNewElementToTree.cs" />
     <Compile Include="Tree-Problems\LevelOrderReverse.cs" />
+    <Compile Include="Tree-Problems\NumberOfLeavesNonRecursive.cs" />
     <Compile Include="Tree-Problems\SizeOfBinaryTree-1.cs" />
     <Compile Include="Tree-Problems\SizeOfBinaryTree-2.cs" />
     <Compile Include="Tree-Problems\SizeOfBinaryTree.cs" />
