@@ -49,6 +49,42 @@ namespace C_Sharp_Data_Structure.Tree_Problems
         }
         #endregion Queue operations
 
+        #region BST Operation
+        public int FindMaxSumOfLevel()
+        {
+            int level = 0, maxLevel = 0;
+            int maxSum = 0, currentSum = 0;
+
+            EnQueue(rootNode);
+            EnQueue(null);
+
+            while (!IsEmptyQueue())
+            {
+                var temp = DeQueue();
+                if(temp == null)
+                {
+                    if(currentSum > maxSum)
+                    {
+                        maxSum = currentSum;
+                        maxLevel = level;
+                    }
+                    currentSum = 0;
+                    if (!IsEmptyQueue())
+                        EnQueue(null);
+                    level++;
+                }
+                else
+                {
+                    currentSum += temp.data;
+                    if (temp.leftNode != null)
+                        EnQueue(temp.leftNode);
+                    if (temp.rightNode != null)
+                        EnQueue(temp.rightNode);
+                }
+            }
+        }
+        #endregion BST Operation
+
         public static void Main(string[] args)
         {
             Console.WriteLine("Hello world");
