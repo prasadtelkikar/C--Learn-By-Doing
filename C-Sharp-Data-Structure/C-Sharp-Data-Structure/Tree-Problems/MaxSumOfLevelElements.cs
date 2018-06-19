@@ -82,6 +82,7 @@ namespace C_Sharp_Data_Structure.Tree_Problems
                         EnQueue(temp.rightNode);
                 }
             }
+            return maxLevel;
         }
         #endregion BST Operation
 
