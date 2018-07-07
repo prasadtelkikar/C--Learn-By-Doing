@@ -88,7 +88,16 @@ namespace C_Sharp_Data_Structure.Tree_Problems
 
         public static void Main(string[] args)
         {
-            Console.WriteLine("Hello world");
+            MaxSumOfLevelElements maxLevelElement = new MaxSumOfLevelElements();
+            maxLevelElement.rootNode = new BSTNode(1);
+            maxLevelElement.rootNode.leftNode = new BSTNode(2);
+            maxLevelElement.rootNode.rightNode = new BSTNode(3);
+            maxLevelElement.rootNode.leftNode.leftNode = new BSTNode(4);
+            maxLevelElement.rootNode.leftNode.rightNode = new BSTNode(5);
+            maxLevelElement.rootNode.rightNode.rightNode = new BSTNode(6);
+            maxLevelElement.rootNode.rightNode.rightNode = new BSTNode(7);
+            Console.WriteLine(maxLevelElement.FindMaxSumOfLevel());
+            //Console.WriteLine("Hello world");
             Console.ReadKey();
         }
 

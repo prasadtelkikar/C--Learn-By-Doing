@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.MaxSumOfLevelElements</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.CheckSumInPath</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -124,6 +124,7 @@
     <Compile Include="Stack\StackUsingDynamicArray.cs" />
     <Compile Include="Stack\StackUsingFixedArray.cs" />
     <Compile Include="Stack\StackUsingLinkedList.cs" />
+    <Compile Include="Tree-Problems\CheckSumInPath.cs" />
     <Compile Include="Tree-Problems\DeleteBinaryTree.cs" />
     <Compile Include="Tree-Problems\DeleteNodeFromBST.cs" />
     <Compile Include="Tree-Problems\FindDeepestNode.cs" />
@@ -139,6 +140,7 @@
     <Compile Include="Tree-Problems\LevelOrderReverse.cs" />
     <Compile Include="Tree-Problems\MaxSumOfLevelElements.cs" />
     <Compile Include="Tree-Problems\NumberOfLeavesNonRecursive.cs" />
+    <Compile Include="Tree-Problems\PrintRootToLeafPath.cs" />
     <Compile Include="Tree-Problems\SizeOfBinaryTree-1.cs" />
     <Compile Include="Tree-Problems\SizeOfBinaryTree-2.cs" />
     <Compile Include="Tree-Problems\SizeOfBinaryTree.cs" />
