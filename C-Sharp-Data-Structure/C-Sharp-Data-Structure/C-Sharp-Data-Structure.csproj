@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Tree_Problems.TreeMirrorRecursion</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Tree_Restarted.InsertNodeToTree</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -148,6 +148,9 @@
     <Compile Include="Tree-Problems\SumOfAllNodes.cs" />
     <Compile Include="Tree-Problems\SumOfAllNodesWithoutRecursion.cs" />
     <Compile Include="Tree-Problems\TreeMirrorRecursion.cs" />
+    <Compile Include="Tree-Restarted\InOrder.cs" />
+    <Compile Include="Tree-Restarted\InsertNodeToTree.cs" />
+    <Compile Include="Tree-Restarted\PreOrder.cs" />
     <Compile Include="Tree\InsertNodeToTree.cs" />
     <Compile Include="Tree\InOrder.cs" />
     <Compile Include="Tree\LevelOrderTraversal.cs" />
