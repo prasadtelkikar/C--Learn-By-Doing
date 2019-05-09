@@ -10,6 +10,7 @@ namespace C_Sharp_Data_Structure.Tree
     {
         private BinaryTreeNode rootNode;
         private Queue head;
+
         #region constructor
         public LevelOrderTraversal()
         {

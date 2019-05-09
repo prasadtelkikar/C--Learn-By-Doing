@@ -33,7 +33,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>C_Sharp_Data_Structure.Tree_Restarted.InsertNodeToTree</StartupObject>
+    <StartupObject>C_Sharp_Data_Structure.Tree_Restarted.LevelOrderTreeTraversal</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -150,6 +150,9 @@
     <Compile Include="Tree-Problems\TreeMirrorRecursion.cs" />
     <Compile Include="Tree-Restarted\InOrder.cs" />
     <Compile Include="Tree-Restarted\InsertNodeToTree.cs" />
+    <Compile Include="Tree-Restarted\LevelOrderTreeTraversal.cs" />
+    <Compile Include="Tree-Restarted\PostOrderUsingSingleStack.cs" />
+    <Compile Include="Tree-Restarted\PostOrderUsingTwoStacks.cs" />
     <Compile Include="Tree-Restarted\PreOrder.cs" />
     <Compile Include="Tree\InsertNodeToTree.cs" />
     <Compile Include="Tree\InOrder.cs" />
